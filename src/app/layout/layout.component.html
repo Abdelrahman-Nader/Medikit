@@ -1,5 +1,17 @@
-<p>layout works!</p>
-top nav
-side navigation
-content
-<router-outlet></router-outlet>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <app-top-nav></app-top-nav>
+</div>
+
+<div style="background-color: rgba(255, 0, 0, 0.329)">
+  <div style="background-color: rgba(0, 0, 255, 0.322)">
+    <app-side-nav></app-side-nav>
+  </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div style="background-color: rgba(255, 255, 0, 0.295)">
+  <app-footer></app-footer>
+</div>
