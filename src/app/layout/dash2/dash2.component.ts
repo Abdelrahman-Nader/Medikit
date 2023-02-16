@@ -13,7 +13,7 @@ export class Dash2Component {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
+          { title: 'Doctors', cols: 1, rows: 1 },
           { title: 'Card 2', cols: 1, rows: 1 },
           { title: 'Card 3', cols: 1, rows: 1 },
           { title: 'Card 4', cols: 1, rows: 1 }
@@ -21,7 +21,7 @@ export class Dash2Component {
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
+        { title: 'Doctors', cols: 2, rows: 1 },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 2 },
         { title: 'Card 4', cols: 1, rows: 1 }

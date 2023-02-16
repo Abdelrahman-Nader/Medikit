@@ -7,12 +7,12 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar> Menu
+    <mat-toolbar routerLink="/home"> Menu
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </mat-toolbar>
     <mat-nav-list>
       <li>
-        <button mat-button routerLink="/">
+        <button mat-button routerLink="/dashboard">
           <mat-icon>view_quilt</mat-icon>
           over view
         </button>
