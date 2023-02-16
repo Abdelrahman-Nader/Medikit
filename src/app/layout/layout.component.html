@@ -5,63 +5,63 @@
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
+    [opened]="isHandsets === false"
   >
-    <mat-toolbar routerLink="/home"> Menu
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    <mat-toolbar routerLink="/home" (click)="isOpen()">
+      Menu
+      <mat-icon aria-label="Side nav toggle icon">home</mat-icon>
     </mat-toolbar>
     <mat-nav-list>
-      <li>
-        <button mat-button routerLink="/dashboard">
-          <mat-icon>view_quilt</mat-icon>
-          over view
-        </button>
-      </li>
-
-      <li>
-        <button mat-button>
-          <mat-icon>man</mat-icon>
-          Doctor
-        </button>
-      </li>
-
-      <li>
-        <button mat-button>
-          <mat-icon>person</mat-icon>
-          patient
-        </button>
-      </li>
-
-      <li>
-        <button mat-button>
-          <mat-icon>event_note</mat-icon>
-          Department
-        </button>
-      </li>
-
+      <mat-stepper orientation="vertical">
+        <mat-step none>
+          <button mat-button routerLink="/dashboard" >
+            <mat-icon>view_quilt</mat-icon>
+            over view
+          </button>
+          <li>
+            <button mat-button>
+              <mat-icon>man</mat-icon>
+              Doctor
+            </button>
+          </li>
+          <mat-divider></mat-divider>
+          <li>
+            <button mat-button>
+              <mat-icon>person</mat-icon>
+              patient
+            </button>
+          </li>
+          <mat-divider></mat-divider>
+          <li>
+            <button mat-button>
+              <mat-icon>event_note</mat-icon>
+              Department
+            </button>
+          </li>
+        </mat-step>
+      </mat-stepper>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
       <li>
         <button mat-button>
           <mat-icon>assignment</mat-icon>
           Appointment
         </button>
       </li>
-
+      <mat-divider></mat-divider>
       <li>
         <button mat-button>
           <mat-icon>person</mat-icon>
           pharmacy
         </button>
-
       </li>
-
+      <mat-divider></mat-divider>
       <li>
-        <button mat-button>
+        <button mat-button selected>
           <mat-icon>credit_card</mat-icon>
           payment
         </button>
-
       </li>
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -71,11 +71,13 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
+        *ngIf="isHandsets"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()"
+          >menu</mat-icon
+        >
       </button>
-      <span>medikit</span>
+      <span (click)="isOpen()">medikit</span>
     </mat-toolbar>
 
     <router-outlet></router-outlet>

@@ -15,11 +15,17 @@ export class LayoutComponent implements OnInit {
       map(result => result.matches),
       shareReplay()
     );
-
+    isHandsets = false
 
     constructor(private breakpointObserver: BreakpointObserver) {}
+
+
 
   ngOnInit(): void {
   }
 
+
+  isOpen() {
+    this.isHandsets =! this.isHandsets
+  }
 }
