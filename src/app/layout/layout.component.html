@@ -1,17 +1,83 @@
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <app-top-nav></app-top-nav>
-</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar> Menu
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </mat-toolbar>
+    <mat-nav-list>
+      <li>
+        <button mat-button routerLink="/">
+          <mat-icon>view_quilt</mat-icon>
+          over view
+        </button>
+      </li>
 
-<div style="background-color: rgba(255, 0, 0, 0.329)">
-  <div style="background-color: rgba(0, 0, 255, 0.322)">
-    <app-side-nav></app-side-nav>
-  </div>
+      <li>
+        <button mat-button>
+          <mat-icon>man</mat-icon>
+          Doctor
+        </button>
+      </li>
 
-  <div>
+      <li>
+        <button mat-button>
+          <mat-icon>person</mat-icon>
+          patient
+        </button>
+      </li>
+
+      <li>
+        <button mat-button>
+          <mat-icon>event_note</mat-icon>
+          Department
+        </button>
+      </li>
+
+      <li>
+        <button mat-button>
+          <mat-icon>assignment</mat-icon>
+          Appointment
+        </button>
+      </li>
+
+      <li>
+        <button mat-button>
+          <mat-icon>person</mat-icon>
+          pharmacy
+        </button>
+
+      </li>
+
+      <li>
+        <button mat-button>
+          <mat-icon>credit_card</mat-icon>
+          payment
+        </button>
+
+      </li>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>medikit</span>
+    </mat-toolbar>
+
     <router-outlet></router-outlet>
-  </div>
-</div>
-
-<div style="background-color: rgba(255, 255, 0, 0.295)">
-  <app-footer></app-footer>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
