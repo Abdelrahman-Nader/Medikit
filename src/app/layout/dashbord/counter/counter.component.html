@@ -1,0 +1,20 @@
+<mat-card class="card-count">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="25" fxLayoutAlign="center center">
+      <img src="./assets/imge/{{ data.icon }}" alt="photo" />
+      <!-- ./assets/imge/{{ data.icon }} -->
+    </div>
+    <div fxlayout="column">
+      <div class="card-num">{{ data.value }}</div>
+      <div>{{ data.title }}</div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="25" fxLayoutAlign="center center">
+      <span class="nots">{{ data.idNum }}</span>
+    </div>
+    <div>
+      <span class="card-disc">{{ data.nots }}</span>
+    </div>
+  </div>
+</mat-card>

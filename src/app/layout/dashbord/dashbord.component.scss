@@ -1,0 +1,23 @@
+:host{
+  margin: 0px;
+}
+.card{
+      // margin-bottom: 10px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 1e-9px;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.mat-card.mat-card.mat-focus-indicator {
+  align-items: start;
+}
+div {
+  align-items:start;
+  justify-content: flex-start;
+}
+
+.row-count {
+  padding: 20px;
+}

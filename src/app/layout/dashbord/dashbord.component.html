@@ -1,22 +1,73 @@
-<div>
-  <div>Doctors</div>
-  <div>staffs</div>
-  <div>patients</div>
-  <div>pharmacies</div>
-</div>
+<div
+  fxFill
+  fxLayout="column"
+  fxLayoutGap="10px"
+  fxLayoutAlign="space-between stretch"
+>
+  <div
+    *ngIf=""
+    fxFlex
+    fxLayout="row"
+    fxLayoutGap="10px"
+    fxLayoutAlign="space-between center"
+    class="row-count"
+  >
+    <!-- <mat-card fxFlex>Doctors</mat-card> -->
+    <app-counter
+      fxFlex
+      icon="doctors.png"
+      title="Doctors"
+      nots="Doctors joined this week"
+      idNum="3"
+    ></app-counter>
+    <!-- <mat-card fxFlex>staffs</mat-card> -->
+    <app-counter
+      fxFlex
+      icon="staffs.png"
+      title="Staffs"
+      nots="Staffs on vacation"
+      idNum="8"
+    ></app-counter>
+    <!-- <mat-card fxFlex>patients</mat-card> -->
+    <app-counter
+      fxFlex
+      icon="patients.png"
+      title="Patients"
+      nots="New patients admitted"
+      idNum="175"
+    ></app-counter>
+    <!-- <mat-card >pharmacies</mat-card> -->
+    <app-counter
+      fxFlex
+      icon="pharamcy.png"
+      title="Pharamcies"
+      nots="Medicine on reserve"
+      idNum="85"
+    ></app-counter>
+  </div>
+  <h1>New</h1>
+  <div
+    fxFlex
+    fxLayout="row"
+    fxLayoutGap="10px"
+    fxLayoutAlign="space-between center"
+    class="row-count"
+  >
+    <app-counter *ngFor="let item of arr" fxFlex [data]="item"></app-counter>
+  </div>
 
-<mat-divider></mat-divider>
+  <br />
 
-<div>
-  <div> hospital birth & death analytics </div>
-  <div> hospital report</div>
-  <div> success stats</div>
-</div>
+  <div fxFlex fxLayout="row" fxLayoutGap="10px">
+    <mat-card fxFlex>hospital birth & death analytics</mat-card>
+    <mat-card fxFlex>hospital report</mat-card>
+    <mat-card fxFlex>success stats</mat-card>
+  </div>
 
-<mat-divider></mat-divider>
+  <br />
 
-
-<div>
-  <table>online</table>
-  <div>doctors list</div>
+  <div fxFlex fxLayout="row" fxLayoutGap="10px">
+    <mat-card fxFlex> online </mat-card>
+    <mat-card fxFlex>doctors list</mat-card>
+  </div>
 </div>

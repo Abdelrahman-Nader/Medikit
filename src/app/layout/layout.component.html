@@ -73,11 +73,12 @@
         (click)="drawer.toggle()"
         *ngIf="isHandsets"
       >
-        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()"
-          >menu</mat-icon
-        >
+        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()">menu</mat-icon>
       </button>
+
+      <img src="./assets/imge/logo.png" alt="logo">
       <span (click)="isOpen()">medikit</span>
+
     </mat-toolbar>
 
     <router-outlet></router-outlet>

@@ -1,0 +1,67 @@
+.mat-icon {
+  font-size: 50px;
+  position: relative;
+}
+::before.mat-icon {
+  content: '';
+  color: #4fc569;
+  width: 10px;
+  height: 10px;
+
+}
+.mat-h3 {
+  margin: 0;
+  // position: relative;
+  font-size: 15px;
+  left: -125px;
+  top: 27px;
+  font-weight: 500;
+  color: #858585;
+}
+span {
+  // position: relative;
+  font-size: 25px;
+  left: -15px;
+  font-weight: 600;
+}
+span.nots {
+  // position: relative;
+  font-size: 15px;
+  left: 2px;
+  top: 6px;
+  font-weight: 500;
+  color: #4fc569;
+}
+h3 {
+  /* margin: 20px; */
+  // position: relative;
+  right: 46px;
+  bottom: -15px;
+  font-weight: 500;
+}
+.border {
+  border: 1px solid red;
+  border-radius: 50%;
+  border-width: 2px;
+}
+.divCustome{
+  flex-flow: row nowrap;
+    box-sizing: border-box;
+    display: flex;
+    /* place-content: center space-around; */
+    align-items: center;
+    justify-content: center;
+}
+.card-disc{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-num {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.card-count {
+  max-height: 150px !important;
+}

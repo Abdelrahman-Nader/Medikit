@@ -16,7 +16,8 @@ export class Dash2Component {
           { title: 'Doctors', cols: 1, rows: 1 },
           { title: 'Card 2', cols: 1, rows: 1 },
           { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Card 4', cols: 1, rows: 1 },
+          { title: 'Card 5', cols: 1, rows: 1 }
         ];
       }
 
@@ -24,7 +25,8 @@ export class Dash2Component {
         { title: 'Doctors', cols: 2, rows: 1 },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Card 4', cols: 1, rows: 1 },
+        { title: 'Card 5', cols: 2, rows: 1 }
       ];
     })
   );
