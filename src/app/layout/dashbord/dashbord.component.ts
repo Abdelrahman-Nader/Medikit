@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashbord',
@@ -6,34 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashbord.component.scss'],
 })
 export class DashbordComponent implements OnInit {
-  arr: any = [
+  @Output() arr: any = [
     {
       icon: 'doctors.png',
       title: 'Doctors',
       nots: 'Doctors joined this week',
-      value: 1233,
+      value: 2937,
       idNum: 3,
     },
     {
       icon: 'staffs.png',
       title: 'Staffs',
       nots: 'Staffs on vacation',
-      value: 1233,
+      value: 5453,
       idNum: 8,
     },
     {
       icon: 'patients.png',
       title: 'Patients',
       nots: 'New patients admitted',
-      value: 1233,
+      value: 170+'K',
       idNum: 175,
     },
     {
       icon: 'pharamcy.png',
       title: 'Pharamcies',
       nots: 'Medicine on reserve',
-      value: 1233,
-      idNum: 85,
+      value: 21,
+      idNum: 85+'K',
     },
   ];
 

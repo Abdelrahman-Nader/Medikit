@@ -1,9 +1,9 @@
-<mat-card class="card-count">
+<!--  <mat-card class="card-count">
   <div fxLayout="row" fxLayoutAlign="start center">
     <div fxFlex="25" fxLayoutAlign="center center">
       <img src="./assets/imge/{{ data.icon }}" alt="photo" />
-      <!-- ./assets/imge/{{ data.icon }} -->
-    </div>
+      ./assets/imge/{{ data.icon }} -->
+    <!-- </div>
     <div fxlayout="column">
       <div class="card-num">{{ data.value }}</div>
       <div>{{ data.title }}</div>
@@ -11,10 +11,29 @@
   </div>
   <div fxLayout="row" fxLayoutAlign="start center">
     <div fxFlex="25" fxLayoutAlign="center center">
-      <span class="nots">{{ data.idNum }}</span>
-    </div>
+      <span class="nots">{{ data.idNum }}</span> -->
+    <!-- </div>
     <div>
-      <span class="card-disc">{{ data.nots }}</span>
-    </div>
-  </div>
+      <!-- <span class="card-disc">{{ data.idNum }}</span> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </mat-card> -->
+<mat-card fxlayout="row">
+  <div fxLayoutAlign="start center">
+    <img src="./assets/imge/{{ data.icon }}" alt="photo" />
+    <mat-card-header>
+    <mat-card-title>
+      {{data.value}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{data.title}}
+    </mat-card-subtitle>
+</mat-card-header>
+</div>
+<div fxlayout="row">
+  <span> {{data.idNum}}</span>
+  <mat-card-content>
+    {{ data.nots }}
+  </mat-card-content>
+</div>
 </mat-card>

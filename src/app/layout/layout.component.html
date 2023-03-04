@@ -8,8 +8,10 @@
     [opened]="isHandsets === false"
   >
     <mat-toolbar routerLink="/home" (click)="isOpen()">
-      Menu
-      <mat-icon aria-label="Side nav toggle icon">home</mat-icon>
+
+      <!-- <mat-icon aria-label="Side nav toggle icon">home</mat-icon> -->
+      <img src="./assets/imge/logo.png" alt="logo">
+      <span (click)="isOpen()">MediKit</span>
     </mat-toolbar>
     <mat-nav-list>
       <mat-stepper orientation="vertical">
@@ -65,7 +67,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="white" dir="rtl" fxLayoutGap="20px">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -75,9 +77,36 @@
       >
         <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()">menu</mat-icon>
       </button>
+      <div  fxLayout="row" fxLayoutAlign="center center" dir="rtl" fxLayoutGap="20px">
+        <ul dir="rtl" fxLayoutGap="20px">
 
-      <img src="./assets/imge/logo.png" alt="logo">
-      <span (click)="isOpen()">medikit</span>
+            <button mat-icon-button>
+              <mat-icon> settings </mat-icon>
+            </button>
+
+
+
+            <button mat-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_horiz</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Sign out
+              </button>
+
+            </mat-menu>
+
+          <!-- <li>
+            <mat-form-field>
+              <mat-label>What's your name?</mat-label>
+              <input>
+            </mat-form-field>
+          </li> -->
+        </ul>
+
+      </div>
+
 
     </mat-toolbar>
 

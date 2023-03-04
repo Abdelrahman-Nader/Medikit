@@ -65,3 +65,15 @@ h3 {
 .card-count {
   max-height: 150px !important;
 }
+img{
+  width: 75px;
+  height: 75px;
+}
+span{
+  font-size: medium;
+  margin-right: 5px;
+}
+.mat-card-actions, .mat-card-subtitle, .mat-card-content {
+    display: inline-block ;
+  margin-bottom: 10px;
+}
