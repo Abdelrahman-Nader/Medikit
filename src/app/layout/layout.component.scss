@@ -21,3 +21,41 @@ li {
   list-style: none;
 
 }
+// .mat-card-actions, .mat-card-subtitle, .mat-card-content {
+//   display: inline-block ;
+// margin-bottom: 10px;
+// }
+.small-menu{
+  // height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.small-menu img{
+  height: 50px;
+}
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+.mat-card-title.mat-card-title{
+  margin: 0;
+
+}
+.mat-card-subtitle.mat-card-subtitle{
+  margin: 0;
+}
+.ul-menu{
+  margin: 0;
+  padding: 0;
+  // height: 50px;
+}
+.button.mat-focus-indicator.mat-menu-trigger.mat-button.mat-button-base{
+  margin: 0;
+  // height: 50px;
+}

@@ -8,15 +8,14 @@
     [opened]="isHandsets === false"
   >
     <mat-toolbar routerLink="/home" (click)="isOpen()">
-
       <!-- <mat-icon aria-label="Side nav toggle icon">home</mat-icon> -->
-      <img src="./assets/imge/logo.png" alt="logo">
+      <img src="./assets/imge/logo.png" alt="logo" />
       <span (click)="isOpen()">MediKit</span>
     </mat-toolbar>
     <mat-nav-list>
       <mat-stepper orientation="vertical">
         <mat-step none>
-          <button mat-button routerLink="/dashboard" >
+          <button mat-button routerLink="/dashboard">
             <mat-icon>view_quilt</mat-icon>
             over view
           </button>
@@ -43,7 +42,6 @@
         </mat-step>
       </mat-stepper>
       <mat-divider></mat-divider>
-      <mat-divider></mat-divider>
       <li>
         <button mat-button>
           <mat-icon>assignment</mat-icon>
@@ -67,7 +65,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="white" dir="rtl" fxLayoutGap="20px">
+    <mat-toolbar color="white" dir="rtl" fxLayoutGap="20px" >
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -75,28 +73,38 @@
         (click)="drawer.toggle()"
         *ngIf="isHandsets"
       >
-        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()"
+          >menu</mat-icon
+        >
       </button>
-      <div  fxLayout="row" fxLayoutAlign="center center" dir="rtl" fxLayoutGap="20px">
-        <ul dir="rtl" fxLayoutGap="20px">
+      <div
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        dir="rtl"
+        fxLayoutGap="20px"
+      >
+        <ul dir="rtl" fxLayoutGap="20px" class="ul-menu">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <div fxlayout="row" class="small-menu">
+              <mat-icon>expand_more</mat-icon>
 
+              <mat-card-header fxlayout="row">
+                <mat-card-title> Dr.{{docList.nameOne}} </mat-card-title>
+                <mat-card-subtitle> {{docList.posittion}} </mat-card-subtitle>
+                <img src="./assets/imge/logo.png" alt="photo" />
+                </mat-card-header>
+
+            </div>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Sign out
+            </button>
             <button mat-icon-button>
               <mat-icon> settings </mat-icon>
             </button>
-
-
-
-            <button mat-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_horiz</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item>
-                <mat-icon>exit_to_app</mat-icon>
-                Sign out
-              </button>
-
-            </mat-menu>
-
+          </mat-menu>
           <!-- <li>
             <mat-form-field>
               <mat-label>What's your name?</mat-label>
@@ -104,10 +112,7 @@
             </mat-form-field>
           </li> -->
         </ul>
-
       </div>
-
-
     </mat-toolbar>
 
     <router-outlet></router-outlet>
