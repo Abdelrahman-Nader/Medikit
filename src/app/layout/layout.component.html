@@ -13,9 +13,8 @@
       <span (click)="isOpen()">MediKit</span>
     </mat-toolbar>
     <mat-nav-list>
-      <mat-stepper orientation="vertical">
-        <mat-step none>
-          <button mat-button routerLink="/dashboard">
+
+          <button mat-button routerLink="/dashboard" class="overView">
             <mat-icon>view_quilt</mat-icon>
             over view
           </button>
@@ -39,8 +38,7 @@
               Department
             </button>
           </li>
-        </mat-step>
-      </mat-stepper>
+
       <mat-divider></mat-divider>
       <li>
         <button mat-button>
@@ -65,7 +63,15 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="white" dir="rtl" fxLayoutGap="20px" >
+    <div  fxLayout="row"
+    fxLayoutAlign="center center"
+    dir="ltr"
+    fxLayoutGap="20px" class="search">
+      <mat-icon>search</mat-icon>
+      <P>Search for Fils, Patiient or Files</P>
+    </div>
+    <mat-toolbar color="white" dir="rtl" fxLayoutGap="20px">
+
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -73,8 +79,9 @@
         (click)="drawer.toggle()"
         *ngIf="isHandsets"
       >
-        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()"
-          >menu</mat-icon
+        <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()" dir="rtl">
+          menu
+          </mat-icon
         >
       </button>
       <div
@@ -83,17 +90,18 @@
         dir="rtl"
         fxLayoutGap="20px"
       >
+
         <ul dir="rtl" fxLayoutGap="20px" class="ul-menu">
           <button mat-button [matMenuTriggerFor]="menu">
             <div fxlayout="row" class="small-menu">
               <mat-icon>expand_more</mat-icon>
 
               <mat-card-header fxlayout="row">
-                <mat-card-title> Dr.{{docList.nameOne}} </mat-card-title>
-                <mat-card-subtitle> {{docList.posittion}} </mat-card-subtitle>
+                <mat-card-title> Dr.{{ docList.nameOne }} </mat-card-title>
+                <mat-card-subtitle> Admin {{ docList.posittion }} </mat-card-subtitle>
                 <img src="./assets/imge/logo.png" alt="photo" />
-                </mat-card-header>
-
+                <mat-icon> textsms</mat-icon>
+              </mat-card-header>
             </div>
           </button>
           <mat-menu #menu="matMenu">

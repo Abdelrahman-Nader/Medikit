@@ -7,12 +7,15 @@ import { MaterialModule } from 'src/app/shared/module/material.module';
 import { Dash2Component } from '../dash2/dash2.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CounterComponent } from './counter/counter.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   imports: [
     CommonModule,
     DashborRoutingdModule,
     RouterModule,
+    HighchartsChartModule,
 
     MaterialModule,
     // MatDividerModule,
@@ -24,6 +27,7 @@ import { CounterComponent } from './counter/counter.component';
   ],
   declarations: [DashbordComponent,
     Dash2Component,
-    CounterComponent,]
+    CounterComponent,
+    WidgetsComponent,]
 })
 export class DashbordModule { }

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/module/shared.module';
 import { MaterialModule } from './shared/module/material.module';
 import { Page404Component } from './page404/page404.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Page404Component } from './page404/page404.component';
     SharedModule,
     MaterialModule,
     RouterModule,
+    HighchartsChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

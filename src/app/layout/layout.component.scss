@@ -59,3 +59,27 @@ li {
   margin: 0;
   // height: 50px;
 }
+.search{
+  z-index: 1;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  display: flex;
+  flex-direction: row;
+}
+.mat-nav-list.mat-nav-list.mat-list-base.ng-tns-c296-0 {
+  color: #606060d9;
+}
+.overView:hover{
+  color: white;
+  background-color: #1c7ece;
+  border: solid 10px white;
+  border-radius: 20px;
+}
+li:hover{
+  color: white;
+    background-color: #1c7ece;
+    border: solid 10px white;
+    border-radius: 20px;
+}
+
