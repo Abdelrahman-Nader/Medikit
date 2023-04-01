@@ -17,7 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { HighchartsChartModule } from 'highcharts-angular/public_api';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   imports: [
