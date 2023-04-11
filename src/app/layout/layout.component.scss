@@ -1,17 +1,84 @@
 
-:host{
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  cursor: pointer;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+li {
+  list-style: none;
+
+}
+// .mat-card-actions, .mat-card-subtitle, .mat-card-content {
+//   display: inline-block ;
+// margin-bottom: 10px;
+// }
+.small-menu{
+  // height: 150px;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-mat-drawer-container {
-  height: 100%;
-}
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
-
-mat-drawer{
-  width: 250px;
 }
-mat-drawer-content{
-  padding: 20px;
+.small-menu img{
+  height: 50px;
+}
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+.mat-card-title.mat-card-title{
+  margin: 0;
+
+}
+.mat-card-subtitle.mat-card-subtitle{
+  margin: 0;
+}
+.ul-menu{
+  margin: 0;
+  padding: 0;
+  // height: 50px;
+}
+.button.mat-focus-indicator.mat-menu-trigger.mat-button.mat-button-base{
+  margin: 0;
+  // height: 50px;
+}
+.search{
+  z-index: 1;
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  display: flex;
+  flex-direction: row;
+}
+.mat-nav-list.mat-nav-list.mat-list-base.ng-tns-c296-0 {
+  color: #606060d9;
+}
+.overView:hover{
+  color: white;
+  background-color: #1c7ece;
+  border: solid 10px white;
+  border-radius: 0%;
+}
+li:hover{
+  color: white;
+    background-color: #1c7ece;
+    border: solid 10px white;
+    border-radius:0%;
 }

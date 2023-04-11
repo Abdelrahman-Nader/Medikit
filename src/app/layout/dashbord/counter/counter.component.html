@@ -1,0 +1,19 @@
+<mat-card fxlayout="row">
+  <div fxLayoutAlign="start center">
+    <img src="./assets/imge/{{ data.icon }}" alt="photo" />
+    <mat-card-header>
+    <mat-card-title>
+      {{data.value}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{data.title}}
+    </mat-card-subtitle>
+</mat-card-header>
+</div>
+<div fxlayout="row">
+  <span> {{data.idNum}}</span>
+  <mat-card-content>
+    {{ data.nots }}
+  </mat-card-content>
+</div>
+</mat-card>

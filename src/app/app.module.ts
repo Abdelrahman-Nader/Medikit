@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/module/shared.module';
 import { MaterialModule } from './shared/module/material.module';
 import { Page404Component } from './page404/page404.component';
+import { matDrawerAnimations } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Page404Component } from './page404/page404.component';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
+
     RouterModule,
   ],
   providers: [],
