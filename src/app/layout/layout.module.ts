@@ -18,6 +18,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './nav/nav.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   imports: [
     CommonModule,
@@ -38,6 +39,7 @@ import { NavComponent } from './nav/nav.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    FlexLayoutModule,
   ],
   declarations: [
     LayoutComponent,

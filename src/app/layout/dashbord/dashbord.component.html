@@ -1,20 +1,14 @@
 <div
   fxFill
-  fxFlex="25%"
   fxLayout="column"
+  fxLayout.lt-sm="column"
   fxLayoutGap="10px"
-  fxLayoutAlign="space-between stretch"
-
+  fxLayoutAlign="space-around stretch"
 >
-  <div
-    *ngIf=""
-    fxFlex="25%"
-
-    class="row-count"
-  >
+  <div *ngIf="" fxLayout.lt-sm="column" class="row-count">
     <!-- <mat-card fxFlex>Doctors</mat-card> -->
     <app-counter
-      fxFlex fxLayout="row" fxLayoutGap="10px"
+
       icon="doctors.png"
       title="Doctors"
       nots="Doctors joined this week"
@@ -22,7 +16,7 @@
     ></app-counter>
     <!-- <mat-card fxFlex>staffs</mat-card> -->
     <app-counter
-      fxFlex fxLayout="row" fxLayoutGap="10px"
+      fxFlex="30"
       icon="staffs.png"
       title="Staffs"
       nots="Staffs on vacation"
@@ -30,7 +24,7 @@
     ></app-counter>
     <!-- <mat-card fxFlex>patients</mat-card> -->
     <app-counter
-      fxFlex fxLayout="row" fxLayoutGap="10px"
+      fxFlex="30"
       icon="patients.png"
       title="Patients"
       nots="New patients admitted"
@@ -38,19 +32,17 @@
     ></app-counter>
     <!-- <mat-card >pharmacies</mat-card> -->
     <app-counter
-      fxFlex
+      fxFlex="30"
       icon="pharamcy.png"
       title="Pharamcies"
       nots="Medicine on reserve"
       idNum="85"
-      fxLayout="row" fxLayoutGap="10px"
     ></app-counter>
   </div>
 
   <div
-    fxFlex
+    fxFlex="20"
     fxLayout="row"
-
     fxLayoutGap="10px"
     fxLayoutAlign="space-between center"
     class="row-count"
@@ -60,24 +52,25 @@
 
   <br />
 
-  <div fxFlex="30" fxLayout="row" fxLayoutGap="10px" class="report">
-    <mat-card fxFlex><app-analytics> </app-analytics></mat-card>
+  <div  fxLayout="row" fxLayoutGap="20px" class="report">
+    <mat-card fxFlex="30"><app-analytics> </app-analytics></mat-card>
     <mat-card fxFlex><app-report> </app-report></mat-card>
     <mat-card fxFlex><app-stats> </app-stats></mat-card>
   </div>
 
   <br />
 
-  <div fxLayout="row" fxLayoutGap="10px" class="on-line" fxFlex="66" fxFlexOffset="15">
+  <div
+    fxLayout="row"
+    fxLayoutGap="10px"
+    class="on-line"
+    fxFlex="66"
+    fxFlexOffset="15"
+  >
     <mat-card fxFlex> online </mat-card>
     <mat-card fxFlex>doctors list</mat-card>
   </div>
 </div>
-
-
-
-
-
 
 <!-- <div class="grid-container">
   <h1 class="mat-h1">Over View</h1>

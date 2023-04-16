@@ -8,6 +8,7 @@ import { SharedModule } from './shared/module/shared.module';
 import { MaterialModule } from './shared/module/material.module';
 import { Page404Component } from './page404/page404.component';
 import { matDrawerAnimations } from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { matDrawerAnimations } from '@angular/material/sidenav';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
+    FlexLayoutModule,
 
     RouterModule,
   ],

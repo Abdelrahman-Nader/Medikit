@@ -21,9 +21,10 @@ div {
     justify-content: space-evenly;
     flex-direction: column;
     align-items: stretch;
+    margin: 0px 0px 0px 15px;
   .report{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     margin: 0px 0px 15px 15px;
     flex-direction: row;
     justify-content: space-between;
@@ -31,27 +32,28 @@ div {
   .on-line{
     display: flex;
     align-items: stretch;
-    margin: 0 0 0 15px;
+    // margin: 0 0 0 15px;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.row-count {
-  // margin: 20px 0 0 20px;
-  flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-    flex: 1 1 1e-9px;
-    align-items: stretch;
-    // justify-content: space-around;
-    margin: 15px 0px 0px 0px;
-}
+// .row-count {
+//   // margin: 20px 0 0 20px;
+//   flex-direction: row;
+//     box-sizing: border-box;
+//     display: flex;
+//     flex: 1 1 1e-9px;
+//     align-items: stretch;
+//     // justify-content: space-around;
+//     margin: 15px 0px 0px 0px;
+// }
 .mat-badge-content{
 flex-direction: row;
 }
-mat-card.mat-card.mat-focus-indicator {
-  margin: 0 0 0 54px
+
+div.mat-card-header-text{
+  margin: 0%;
 }
 
 

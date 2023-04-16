@@ -8,12 +8,14 @@ import { CounterComponent } from './counter/counter.component';
 import { ReportComponent } from './report/report.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { StatsComponent } from './stats/stats.component'
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
     DashborRoutingdModule,
     RouterModule,
+    FlexLayoutModule,
 
     MaterialModule,
     // MatDividerModule,
