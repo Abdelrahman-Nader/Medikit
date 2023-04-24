@@ -3,9 +3,9 @@
   height: 100%;
 }
 
-.sidenav {
-  width: 200px;
-}
+// .sidenav {
+//   width: 200px;
+// }
 
 .sidenav .mat-toolbar {
   background: inherit;
@@ -60,12 +60,18 @@ li {
   // height: 50px;
 }
 .search{
-  z-index: 1;
-  position: absolute;
-  top: 23px;
-  left: 23px;
-  display: flex;
-  flex-direction: row;
+  // z-index: 1;
+  // position: absolute;
+  // top: 23px;
+  // left: 23px;
+  // display: flex;
+  // flex-direction: row;
+  .pragra {
+    margin: 0 0 0 15px;
+    border: solid 1px chocolate ;
+    border-radius: 25px 25px;
+    padding: 5px;
+  }
 }
 .mat-nav-list.mat-nav-list.mat-list-base.ng-tns-c296-0 {
   color: #606060d9;

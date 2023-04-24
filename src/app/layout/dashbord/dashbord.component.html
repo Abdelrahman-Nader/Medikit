@@ -1,11 +1,11 @@
 <div
   fxFill
   fxLayout="column"
-  fxLayout.lt-sm="column"
+
   fxLayoutGap="10px"
   fxLayoutAlign="space-around stretch"
 >
-  <div *ngIf="" fxLayout.lt-sm="column" class="row-count">
+  <div *ngIf="" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center stretch" class="row-count">
     <!-- <mat-card fxFlex>Doctors</mat-card> -->
     <app-counter
 
@@ -46,13 +46,21 @@
     fxLayoutGap="10px"
     fxLayoutAlign="space-between center"
     class="row-count"
+    fxLayout.lt-md="column" fxLayoutAlign.lt-md="center stretch"
   >
     <app-counter *ngFor="let item of arr" fxFlex [data]="item"></app-counter>
   </div>
 
   <br />
 
-  <div  fxLayout="row" fxLayoutGap="20px" class="report">
+  <div
+  fxLayout="row"
+  fxLayout.lt-md="column"
+  fxLayoutGap="20px"
+  class="report"
+  fxLayoutAlign.lt-md="center stretch"
+  >
+
     <mat-card fxFlex="30"><app-analytics> </app-analytics></mat-card>
     <mat-card fxFlex><app-report> </app-report></mat-card>
     <mat-card fxFlex><app-stats> </app-stats></mat-card>
@@ -65,9 +73,11 @@
     fxLayoutGap="10px"
     class="on-line"
     fxFlex="66"
-    fxFlexOffset="15"
+    fxLayout.lt-md="column"
+    fxLayoutAlign.lt-md="center stretch"
+
   >
-    <mat-card fxFlex> online </mat-card>
+    <mat-card fxFlex="65"> <app-online></app-online> </mat-card>
     <mat-card fxFlex>doctors list</mat-card>
   </div>
 </div>

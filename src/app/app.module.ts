@@ -9,6 +9,8 @@ import { MaterialModule } from './shared/module/material.module';
 import { Page404Component } from './page404/page404.component';
 import { matDrawerAnimations } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
+// import {MomentDateAdapter} from '@angular/material-moment-adapter';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SharedModule,
     MaterialModule,
     FlexLayoutModule,
-
+    // MomentDateAdapter,
     RouterModule,
   ],
   providers: [],

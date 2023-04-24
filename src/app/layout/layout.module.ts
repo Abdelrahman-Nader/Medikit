@@ -1,3 +1,4 @@
+import { MatTableModule } from '@angular/material/table';
 import { DashbordModule } from './dashbord/dashbord.module';
 import { FooterModule } from './../shared/componets/footer/footer.module';
 import { SideNavModule } from './../shared/componets/side-nav/side-nav.module';
@@ -19,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './nav/nav.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -40,6 +42,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatMenuModule,
     FlexLayoutModule,
+    MatTableModule,
+
   ],
   declarations: [
     LayoutComponent,

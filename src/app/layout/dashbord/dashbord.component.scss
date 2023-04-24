@@ -1,15 +1,15 @@
 :host{
   margin: 0px;
 }
-.card{
-      // margin-bottom: 10px;
-    flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-    flex: 1 1 1e-9px;
-    align-items: stretch;
-    justify-content: space-around;
-}
+// .card{
+//       // margin-bottom: 10px;
+//     flex-direction: row;
+//     box-sizing: border-box;
+//     display: flex;
+//     flex: 1 1 1e-9px;
+//     align-items: stretch;
+//     justify-content: space-around;
+// }
 .mat-card.mat-card.mat-focus-indicator {
   align-items: start;
   width: 150px;
@@ -17,10 +17,10 @@
 
 }
 div {
-  display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: stretch;
+  // display: flex;
+  //   justify-content: space-evenly;
+  //   flex-direction: column;
+  //   align-items: stretch;
     margin: 0px 0px 0px 15px;
   .report{
     display: flex;
@@ -48,9 +48,9 @@ div {
 //     // justify-content: space-around;
 //     margin: 15px 0px 0px 0px;
 // }
-.mat-badge-content{
-flex-direction: row;
-}
+// .mat-badge-content{
+// flex-direction: row;
+// }
 
 div.mat-card-header-text{
   margin: 0%;
