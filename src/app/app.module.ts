@@ -9,6 +9,8 @@ import { MaterialModule } from './shared/module/material.module';
 import { Page404Component } from './page404/page404.component';
 import { matDrawerAnimations } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ServicesTableService } from './services/services-table.service';
+import { Chart } from 'chart.js';
 // import {MomentDateAdapter} from '@angular/material-moment-adapter';
 
 
@@ -26,8 +28,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
     // MomentDateAdapter,
     RouterModule,
+    Chart,
   ],
-  providers: [],
+  providers: [ServicesTableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

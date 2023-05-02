@@ -19,6 +19,7 @@
 }
 li {
   list-style: none;
+  border: solid 1px white;
 
 }
 // .mat-card-actions, .mat-card-subtitle, .mat-card-content {
@@ -59,19 +60,28 @@ li {
   margin: 0;
   // height: 50px;
 }
+.pragra {
+  font-size: 15px;
+  color: #b1b1b1;
+  border: none;
+  // border: 1px solid red;
+  background-color: #faebd7;
+  margin: 0;
+}
+.pragra:hover{
+  box-sizing: border-box;
+  cursor:pointer;
+  width: fit-content;
+  size: 20px;
+}
 .search{
-  // z-index: 1;
+  z-index: 1;
   // position: absolute;
   // top: 23px;
   // left: 23px;
   // display: flex;
   // flex-direction: row;
-  .pragra {
-    margin: 0 0 0 15px;
-    border: solid 1px chocolate ;
-    border-radius: 25px 25px;
-    padding: 5px;
-  }
+
 }
 .mat-nav-list.mat-nav-list.mat-list-base.ng-tns-c296-0 {
   color: #606060d9;
@@ -79,12 +89,40 @@ li {
 .overView:hover{
   color: white;
   background-color: #1c7ece;
-  border: solid 10px white;
-  border-radius: 0%;
+  border: solid 1px white;
+  border-radius: 30px 0px 0px 30px;
+  margin: 0%;
+  padding: 0%;
+  /* position: relative; */
+  /* display: block; */
+  transition: 0.3s;
+  width: 100%;
 }
 li:hover{
   color: white;
-    background-color: #1c7ece;
-    border: solid 10px white;
-    border-radius:0%;
+  background-color: #1c7ece;
+  border: solid 1px white;
+  border-radius: 30px 0px 0px 30px;
+  margin: 0%;
+  padding: 0%;
+  /* position: relative; */
+  /* display: block; */
+  transition: 0.3s;
+  width: 100%;
 }
+.topmenu{
+  background-color: antiquewhite;
+  // position: fixed;
+  z-index: 9999;
+  width: calc(100% );
+}
+
+.main-content{
+  // position: fixed;
+  // top: 76px;
+  width: calc(100% );
+  padding: 10px 0px 10px 0px;
+//  margin: 0;
+  background-color: rgb(108, 155, 196);
+}
+

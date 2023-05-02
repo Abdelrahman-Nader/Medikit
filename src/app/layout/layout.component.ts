@@ -5,12 +5,10 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent implements OnInit {
   @Input() icon: string = '';
-  @Output() docList: any = []
-
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -20,16 +18,15 @@ export class LayoutComponent implements OnInit {
     );
   isHandsets = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.docList = [{
+  constructor(private breakpointObserver: BreakpointObserver) {}
+  @Input() docList: any = [
+    {
       nameOne: 'mohamed',
       posittion: 'admin',
-    },];
-  }
+    }
+  ];
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   isOpen() {
     this.isHandsets = !this.isHandsets;

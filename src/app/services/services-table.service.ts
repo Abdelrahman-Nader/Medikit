@@ -1,18 +1,11 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { ServicesTableService } from 'src/app/services/services-table.service';
-import { TableElment } from 'src/app/table-elment';
+import { Injectable } from '@angular/core';
+import { TableElment } from '../table-elment';
+import { Observable } from 'rxjs';
 
-
-
-@Component({
-  selector: 'app-online',
-  templateUrl: './online.component.html',
-  styleUrls: ['./online.component.scss'],
+@Injectable({
+  providedIn: 'root'
 })
-
-export class OnlineComponent implements OnInit {
-
+export class ServicesTableService {
   ELEMENT_DATA: TableElment[] =
   [
     {position: 1, name: 'Hydrogen', newData : 1.0079, Age: 54, Gender: 'male', AppointFor: 'Dr.', Setting : '12'},
@@ -27,16 +20,7 @@ export class OnlineComponent implements OnInit {
     {position: 10, name: 'Neon', newData : 20.1797, Age: 12, Gender: 'male', AppointFor: 'Dr.', Setting : '121'},
   ];
 
-
-  displayedColumns: string[] = ['position', 'name', 'newData', 'Age', 'Gender', 'AppointFor','Setting'];
-  dataSource:TableElment[]= this.ELEMENT_DATA;
-
-  constructor() {
-
-  }
+  constructor() { }
 
 
-  ngOnInit(): void {
-
-  }
 }

@@ -12,6 +12,7 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '../layout.module';
 import { OnlineComponent } from './online/online.component';
+import { Chart } from 'chart.js';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { OnlineComponent } from './online/online.component';
     FlexLayoutModule,
     MatTableModule,
     MaterialModule,
+
     // MatDividerModule,
     // MatSidenavModule
   ],

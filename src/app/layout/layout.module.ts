@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './nav/nav.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Chart } from 'chart.js';
 
 @NgModule({
   imports: [
@@ -43,6 +44,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatMenuModule,
     FlexLayoutModule,
     MatTableModule,
+    Chart,
 
   ],
   declarations: [

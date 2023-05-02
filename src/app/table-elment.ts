@@ -5,5 +5,6 @@ export interface TableElment {
   Age: number;
   Gender: string;
   AppointFor:string;
+  Setting : string;
 }
 

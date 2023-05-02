@@ -63,70 +63,75 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div
+    <mat-toolbar
+      color="white"
       fxLayout="row"
-      fxLayoutAlign="start end"
-      dir="ltr"
-      fxLayoutGap="0px"
-      class="search"
+      fxLayoutGap="10px"
+      fxLayoutAlign="space-between center"
+      class="topmenu"
     >
-      <mat-icon aria-label="Side nav toggle icon" (click)="isOpen()" dir="ltr" >
+      <div
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="3px"
+        class="search"
+      >
+      <mat-icon
+        aria-label="Side nav toggle icon"
+        (click)="isOpen()"
+        dir="ltr"
+      >
         menu
       </mat-icon>
       <mat-icon>search</mat-icon>
-      <P class="pragra">Search for Files, Pathient or Files</P>
-    </div>
-    <mat-toolbar color="white" dir="rtl" fxLayoutGap="0px" >
-      <!-- <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandsets"
-      >
+      <input type="text" class="pragra" placeholder="Search for Files, Pathient or Files">
+      </div>
+      <div  class="name">
+        <div fxFlex fxLayoutAlign="center center">
+          <mat-icon> textsms</mat-icon>
+          <img src="./assets/imge/logo.png" alt="photo" />
+          <button mat-button [matMenuTriggerFor]="menu">
+            <span> Dr.{{ docList.nameOne }} </span><br>
+            <span> Admin {{ docList.posittion }} </span>
+            <mat-icon>expand_more</mat-icon>
+          </button>
+        </div>
 
-      </button> -->
-
-      <div
-        fxLayout="row"
-        fxLayoutAlign="center center"
-        dir="rtl"
-        fxLayoutGap="0px"
-      >
-        <ul dir="rtl" fxLayoutGap="0px" class="ul-menu">
+        <ul *ngIf="" fxLayoutGap="0px" class="ul-menu" fxFlex >
+          <mat-icon> textsms</mat-icon>
+          <img src="./assets/imge/logo.png" alt="photo" />
           <button mat-button [matMenuTriggerFor]="menu">
             <div fxlayout="row" class="small-menu" fxLayoutGap="0px">
               <mat-icon>expand_more</mat-icon>
-
               <mat-card-header fxlayout="row">
                 <mat-card-title> Dr.{{ docList.nameOne }} </mat-card-title>
                 <mat-card-subtitle>
                   Admin {{ docList.posittion }}
                 </mat-card-subtitle>
-                <img src="./assets/imge/logo.png" alt="photo" />
-                <mat-icon> textsms</mat-icon>
               </mat-card-header>
             </div>
           </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>exit_to_app</mat-icon>
-              Sign out
-            </button>
-            <button mat-icon-button>
-              <mat-icon> settings </mat-icon>
-            </button>
-          </mat-menu>
           <!-- <li>
-            <mat-form-field>
-              <mat-label>What's your name?</mat-label>
-              <input>
-            </mat-form-field>
-          </li> -->
+          <mat-form-field>
+            <mat-label>What's your name?</mat-label>
+            <input>
+          </mat-form-field>
+        </li> -->
         </ul>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            Sign out
+          </button>
+          <button mat-icon-button>
+            <mat-icon> settings </mat-icon>
+          </button>
+        </mat-menu>
       </div>
     </mat-toolbar>
-
-    <router-outlet></router-outlet>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
