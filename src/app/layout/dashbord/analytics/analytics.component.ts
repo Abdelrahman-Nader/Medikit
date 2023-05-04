@@ -10,7 +10,7 @@ export class AnalyticsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    var myChart = new Chart('myChart', {
+    new Chart('myChart', {
       type: 'bar',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
