@@ -1,15 +1,14 @@
 <div
-
   fxLayout="column"
   class="main"
   fxLayoutGap="10px"
   fxLayoutAlign="space-around stretch"
-  fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center stretch"
+  fxLayout.gt-xs="column"
+  fxLayoutAlign.gt-xs="center stretch"
 >
-  <div *ngIf=""  class="row-count">
+  <div *ngIf="" class="row-count">
     <!-- <mat-card fxFlex>Doctors</mat-card> -->
     <app-counter
-
       icon="doctors.png"
       title="Doctors"
       nots="Doctors joined this week"
@@ -47,21 +46,13 @@
     fxLayoutGap="10px"
     fxLayoutAlign="space-between center"
     class="row-count"
-
   >
     <app-counter *ngFor="let item of arr" fxFlex [data]="item"></app-counter>
   </div>
 
   <br />
 
-  <div
-  fxLayout="row"
-  fxLayout.lt-md="column"
-  fxLayoutGap="20px"
-  class="report"
-
-  >
-
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" class="report">
     <mat-card fxFlex="30"><app-analytics> </app-analytics></mat-card>
     <mat-card fxFlex><app-report> </app-report></mat-card>
     <mat-card fxFlex><app-stats> </app-stats></mat-card>
@@ -76,13 +67,14 @@
     fxLayoutAlign="space-between stretch"
     fxLayout.lt-md="column"
     fxLayoutAlign.lt-md="center stretch"
-
   >
-  <div fxFlex>
-    <mat-card fxFlex="65" class="ontable"> <app-online></app-online> </mat-card>
+    <div fxFlex fxLayoutGap="15px" fxLayoutAlign="space-between stretch">
+      <mat-card fxFlex="70" class="ontable">
+        <app-online></app-online>
+      </mat-card>
 
-    <mat-card fxFlex>doctors list</mat-card>
-  </div>
+      <mat-card fxFlex><app-doctor-list></app-doctor-list></mat-card>
+    </div>
   </div>
 </div>
 

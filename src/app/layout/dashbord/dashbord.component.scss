@@ -21,8 +21,9 @@
   //   justify-content: space-evenly;
     flex-direction: column;
   //   align-items: stretch;
-    // margin: 0px 0px 0px 15px;
+    margin: 0px 15px 0px 15px;
     background-color: blue;
+    padding: 0px 15px 15px 0px;
   .report{
     display: flex;
     align-items: stretch;
@@ -33,7 +34,7 @@
   .on-line{
     display: flex;
     align-items: stretch;
-    // margin: 0 0 0 15px;
+    margin: 0 0 0 15px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -44,7 +45,7 @@
 
 .row-count {
 
-    // margin: 15px 0px 0px 0px;
+    margin: 15px 0px 0px 15px;
 }
 // .mat-badge-content{
 // flex-direction: row;

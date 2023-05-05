@@ -1,0 +1,28 @@
+<div class="container">
+  <div
+    class="h-rep"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxFlexAlign="center center"
+    fxLayout.lt-md="column"
+    fxLayoutAlign.lt-md="center stretch"
+  >
+    <h3>Doctor List</h3>
+    <span class="view"> <mat-icon>chevron_right</mat-icon></span>
+  </div>
+
+  <div
+    class="doctor-list"
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+    fxFlexAlign="center"
+    fxLayoutGap="10px"
+  >
+    <img src="./assets/imge/{{ data2.icon2 }}" alt="photo" fxFlex="10" />
+    <div fxLayout="column" fxLayoutAlign="space-between start" fxFlex="-20">
+      <h4>Dr. Brandon</h4>
+      <span class="slogan">gynecologist</span>
+    </div>
+    <mat-icon>more_vert</mat-icon>
+  </div>
+</div>

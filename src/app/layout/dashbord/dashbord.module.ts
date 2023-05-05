@@ -13,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '../layout.module';
 import { OnlineComponent } from './online/online.component';
 import { Chart } from 'chart.js';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { Chart } from 'chart.js';
     AnalyticsComponent,
     StatsComponent,
     OnlineComponent,
+    DoctorListComponent,
     ]
 })
 export class DashbordModule { }
