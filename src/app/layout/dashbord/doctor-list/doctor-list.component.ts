@@ -9,8 +9,8 @@ export class DoctorListComponent implements OnInit {
 
   constructor() { }
 
-@Input()      data2: any = [
-    { icon2: 'photo (2).png'},
+@Input() datas: any = [
+    { icons: 'doctors.png'},
   ]
 
 

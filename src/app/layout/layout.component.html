@@ -71,34 +71,41 @@
       class="topmenu"
     >
       <div
-      fxFlex
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      fxLayoutGap="3px"
+        fxFlex
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        fxLayoutGap="3px"
         class="search"
       >
-      <mat-icon
-        aria-label="Side nav toggle icon"
-        (click)="isOpen()"
-        dir="ltr"
-      >
-        menu
-      </mat-icon>
-      <mat-icon>search</mat-icon>
-      <input type="text" class="pragra" placeholder="Search for Files, Pathient or Files">
+        <mat-icon
+          aria-label="Side nav toggle icon"
+          (click)="isOpen()"
+          dir="ltr"
+        >
+          menu
+        </mat-icon>
+        <mat-icon>search</mat-icon>
+        <input
+          type="text"
+          class="pragra"
+          placeholder="Search for Files, Pathient or Files"
+        />
       </div>
-      <div  class="name">
+      <div class="name">
         <div fxFlex fxLayoutAlign="center center">
           <mat-icon> textsms</mat-icon>
-          <img src="./assets/imge/logo.png" alt="photo" />
-          <button mat-button [matMenuTriggerFor]="menu">
-            <span> Dr.{{ docList.nameOne }} </span><br>
-            <span> Admin {{ docList.posittion }} </span>
+          <img src="./assets/imge/photo (1).png" alt="photo" />
+          <div fxFlex fxLayout="column" fxLayoutAlign="start enter"  fxFlexAlign="auto" class="admin">
+            <span class="dr-name"> Dr.docList.nameOne </span>
+            <span class="dr-admin"> Admin {{ docList.posittion }} </span>
+          </div>
+
+          <button mat-button [matMenuTriggerFor]="menu" fxflex>
             <mat-icon>expand_more</mat-icon>
           </button>
         </div>
 
-        <ul *ngIf="" fxLayoutGap="0px" class="ul-menu" fxFlex >
+        <ul *ngIf="" fxLayoutGap="0px" class="ul-menu" fxFlex>
           <mat-icon> textsms</mat-icon>
           <img src="./assets/imge/logo.png" alt="photo" />
           <button mat-button [matMenuTriggerFor]="menu">
