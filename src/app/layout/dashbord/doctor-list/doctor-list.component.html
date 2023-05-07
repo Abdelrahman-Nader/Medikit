@@ -17,15 +17,16 @@
     fxLayoutAlign="space-around center"
     fxFlexAlign="center"
     fxLayoutGap="10px"
+
   >
-    <img src="./assets/imge/photo (2).png" alt="photo" fxFlex="10" />
+    <img src="./assets/imge/{{data.photo}}" alt="photo" fxFlex="10" />
     <div fxLayout="column" fxLayoutAlign="space-between start" fxFlex="-20">
-      <h4>Dr. Brandon</h4>
-      <span class="slogan">gynecologist</span>
+      <h4>{{data.name}}</h4>
+      <span class="slogan">{{data.nots}}</span>
     </div>
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon>{{data.matIcon}}</mat-icon>
   </div>
-  <div
+  <!-- <div
     class="doctor-list"
     fxLayout="row"
     fxLayoutAlign="space-around center"
@@ -66,6 +67,6 @@
       <span class="slogan">gynecologist</span>
     </div>
     <mat-icon>more_vert</mat-icon>
-  </div>
+  </div> -->
 
 </div>

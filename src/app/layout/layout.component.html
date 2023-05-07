@@ -103,7 +103,7 @@
           <mat-icon> textsms</mat-icon>
           <img src="./assets/imge/photo (1).png" alt="photo" />
           <div fxFlex fxLayout="column" fxLayoutAlign="start enter"  fxFlexAlign="auto" class="admin">
-            <span class="dr-name"> Dr.docList.nameOne </span>
+            <span class="dr-name"> Dr.{{ docList.nameOne }} </span>
             <span class="dr-admin"> Admin {{ docList.posittion }} </span>
           </div>
 
@@ -119,9 +119,9 @@
             <div fxlayout="row" class="small-menu" fxLayoutGap="0px">
               <mat-icon>expand_more</mat-icon>
               <mat-card-header fxlayout="row">
-                <mat-card-title> Dr.{{ docList.nameOne }} </mat-card-title>
+                <mat-card-title> Dr </mat-card-title>
                 <mat-card-subtitle>
-                  Admin {{ docList.posittion }}
+                  Admin
                 </mat-card-subtitle>
               </mat-card-header>
             </div>
@@ -144,7 +144,8 @@
         </mat-menu>
       </div>
     </mat-toolbar>
-    <div class="main-content">
+    <div class="main-content"   fxLayout="column"
+    fxLayoutGap="10px">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

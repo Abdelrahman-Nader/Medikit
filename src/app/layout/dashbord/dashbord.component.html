@@ -6,7 +6,7 @@
   fxLayout.gt-xs="column"
   fxLayoutAlign.gt-xs="center stretch"
 >
-  <div *ngIf="" class="row-count">
+  <div *ngIf="" class="row-count" fxFlex="20">
     <!-- <mat-card fxFlex>Doctors</mat-card> -->
     <app-counter
       icon="doctors.png"
@@ -47,12 +47,18 @@
     fxLayoutAlign="space-between center"
     class="row-count"
   >
-    <app-counter *ngFor="let item of arr" fxFlex [data]="item"></app-counter>
+    <app-counter *ngFor="let item of arr" [data]="item" fxFlex></app-counter>
   </div>
 
   <br />
 
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" class="report">
+  <div
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutGap="20px"
+    class="report"
+    fxFlex="20"
+  >
     <mat-card fxFlex="30"><app-analytics> </app-analytics></mat-card>
     <mat-card fxFlex><app-report> </app-report></mat-card>
     <mat-card fxFlex><app-stats> </app-stats></mat-card>
@@ -67,13 +73,44 @@
     fxLayoutAlign="space-between stretch"
     fxLayout.lt-md="column"
     fxLayoutAlign.lt-md="center stretch"
+    fxFlex="20"
   >
     <div fxFlex fxLayoutGap="15px" fxLayoutAlign="space-between stretch">
-      <mat-card fxFlex="70" class="ontable">
+      <mat-card  class="ontable">
         <app-online></app-online>
       </mat-card>
 
-      <mat-card fxFlex><app-doctor-list></app-doctor-list></mat-card>
+      <mat-card  *ngIf="">
+        <app-doctor-list
+          fxFlex="30"
+          photo="photo (2).png"
+          name="islam"
+          nots="Doctors joined this week"
+          matIcon="icon"
+        ></app-doctor-list>
+        <app-doctor-list
+          photo="photo (3).png"
+          name="Ahmed"
+          nots="Doctors joined this week"
+          matIcon="icon"
+        ></app-doctor-list>
+        <app-doctor-list
+          photo="photo (4).png"
+          name="Abdo"
+          nots="Doctors joined this week"
+          matIcon="icon"
+        ></app-doctor-list>
+        <app-doctor-list
+          photo="photo (5).png"
+          name="Gasser"
+          nots="Doctors joined this week"
+          matIcon="icon"
+        ></app-doctor-list>
+      </mat-card>
+      <mat-card>
+        <app-doctor-list *ngFor="let item of data2" [data]="item">
+        </app-doctor-list>
+      </mat-card>
     </div>
   </div>
 </div>
