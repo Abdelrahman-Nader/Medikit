@@ -18,7 +18,12 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./dashbord/dashbord.module').then(mod => mod.DashbordModule),
-      },]
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then(mod => mod.LoginModule),
+      },
+    ]
   }
 ];
 

@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './nav/nav.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginRoutingModule } from '../login/login.module.routing';
 // import { Chart } from 'chart.js';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     // SharedModule,
     LayoutRoutingModule,
+    LoginRoutingModule,
     TopNavModule,
     SideNavModule,
     FooterModule,
