@@ -1,4 +1,4 @@
-import { library } from './../../../../node_modules/@fortawesome/fontawesome-svg-core/index.d';
+// import { library } from './../../../../node_modules/@fortawesome/fontawesome-svg-core/index.d';
 import { MatTableModule } from '@angular/material/table';
 import { StatsComponent } from './stats/stats.component';
 import { RouterModule } from '@angular/router';
