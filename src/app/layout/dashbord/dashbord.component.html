@@ -73,43 +73,22 @@
     fxLayoutAlign="space-between stretch"
     fxLayout.lt-md="column"
     fxLayoutAlign.lt-md="center stretch"
-    fxFlex="20"
+    fxFlex
   >
-    <div fxFlex fxLayoutGap="15px" fxLayoutAlign="space-between stretch">
-      <mat-card  class="ontable">
+    <div fxFlex="70" fxLayoutGap="15px" fxLayoutAlign="space-between stretch">
+      <mat-card class="ontable">
         <app-online></app-online>
       </mat-card>
-
-      <mat-card  *ngIf="">
-        <app-doctor-list
-          fxFlex="30"
-          photo="photo (2).png"
-          name="islam"
-          nots="Doctors joined this week"
-          matIcon="icon"
-        ></app-doctor-list>
-        <app-doctor-list
-          photo="photo (3).png"
-          name="Ahmed"
-          nots="Doctors joined this week"
-          matIcon="icon"
-        ></app-doctor-list>
-        <app-doctor-list
-          photo="photo (4).png"
-          name="Abdo"
-          nots="Doctors joined this week"
-          matIcon="icon"
-        ></app-doctor-list>
-        <app-doctor-list
-          photo="photo (5).png"
-          name="Gasser"
-          nots="Doctors joined this week"
-          matIcon="icon"
-        ></app-doctor-list>
+    </div>
+    <div fxFlex fxLayoutGap="15px" fxLayoutAlign="space-between stretch">
+      <mat-card *ngIf="">
+        <app-doctor-list fxFlex></app-doctor-list>
+        <app-doctor-list></app-doctor-list>
+        <app-doctor-list></app-doctor-list>
+        <app-doctor-list></app-doctor-list>
       </mat-card>
       <mat-card>
-        <app-doctor-list *ngFor="let item of data2" [data]="item">
-        </app-doctor-list>
+        <app-doctor-list> </app-doctor-list>
       </mat-card>
     </div>
   </div>

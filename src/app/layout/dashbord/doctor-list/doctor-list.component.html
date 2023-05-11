@@ -17,14 +17,14 @@
     fxLayoutAlign="space-around center"
     fxFlexAlign="center"
     fxLayoutGap="10px"
-
+  *ngFor="let item of data "
   >
-    <img src="./assets/imge/{{data.photo}}" alt="photo" fxFlex="10" />
+    <img src="./assets/imge/{{item.photo}}" alt="photo" fxFlex="10" />
     <div fxLayout="column" fxLayoutAlign="space-between start" fxFlex="-20">
-      <h4>{{data.name}}</h4>
-      <span class="slogan">{{data.nots}}</span>
+      <h4>{{item.name}}</h4>
+      <span class="slogan">{{item.nots}}</span>
     </div>
-    <mat-icon>{{data.matIcon}}</mat-icon>
+    <mat-icon>{{item.matIcon}}</mat-icon>
   </div>
   <!-- <div
     class="doctor-list"

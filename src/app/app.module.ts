@@ -11,6 +11,7 @@ import { matDrawerAnimations } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServicesTableService } from './services/services-table.service';
 import { NgChartsModule } from 'ng2-charts';
+// import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 // import { Chart } from 'chart.js';
 // import {MomentDateAdapter} from '@angular/material-moment-adapter';
 
@@ -31,6 +32,8 @@ import { NgChartsModule } from 'ng2-charts';
     RouterModule,
     // Chart,
     NgChartsModule,
+    // FontAwesomeModule,
+
 
 
   ],

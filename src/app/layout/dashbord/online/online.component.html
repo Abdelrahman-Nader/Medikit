@@ -5,14 +5,14 @@
   <span class="view"> view all </span>
 </div>
 <div class="table2">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">//mat-table it a dirctive biltIn angular
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
+  <!-- id Column -->
+  <ng-container matColumnDef="id">//ng-container in dom it is replaced by what is within it
     <th mat-header-cell *matHeaderCellDef>No.</th>
-    <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
   </ng-container>
 
   <!-- Name Column -->
@@ -22,31 +22,36 @@
   </ng-container>
 
   <!-- Date Column -->
-  <ng-container matColumnDef="newData">
-    <th mat-header-cell *matHeaderCellDef>Date</th>
-    <td mat-cell *matCellDef="let element">{{ element.newData }}</td>
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef>user</th>
+    <td mat-cell *matCellDef="let element">{{ element.username }}</td>
   </ng-container>
 
-  <!-- Age Column -->
-  <ng-container matColumnDef="Age">
-    <th mat-header-cell *matHeaderCellDef>Age</th>
-    <td mat-cell *matCellDef="let element">{{ element.Age }}</td>
+  <!-- email Column -->
+  <ng-container matColumnDef="email">//ng-container in dom it is replaced by what is within it
+
+    <th mat-header-cell *matHeaderCellDef>email</th>
+    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
   </ng-container>
-  <ng-container matColumnDef="Gender">
-    <th mat-header-cell *matHeaderCellDef>Gender</th>
-    <td mat-cell *matCellDef="let element">{{ element.Gender }}</td>
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef>city</th>
+    <td mat-cell *matCellDef="let element">{{ element.city }}</td>
   </ng-container>
-  <ng-container matColumnDef="AppointFor">
+  <!-- <ng-container matColumnDef="AppointFor">
     <th mat-header-cell *matHeaderCellDef>AppointFor</th>
     <td mat-cell *matCellDef="let element">{{ element.AppointFor }}</td>
   </ng-container>
-  <ng-container matColumnDef="Setting">
+  <ng-container matColumnDef="imgURL">
     <th mat-header-cell *matHeaderCellDef>Setting</th>
-    <td mat-cell *matCellDef="let element">{{ element.Setting }}</td>
-  </ng-container>
+    <td mat-cell *matCellDef="let element">{{element.imgURL}} </td>
+  </ng-container> -->
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
+<!-- <mat-paginator [pegeSizeOptions]="[5, 10, 20]"
+[length]="100"
+[pegeSize]="5">
+</mat-paginator> -->
 </div>
 </div>
