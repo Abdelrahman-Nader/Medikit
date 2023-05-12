@@ -1,25 +1,22 @@
-import { TableElment } from 'src/app/table-elment';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { get } from 'http';
 import { Itable } from '../itable';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServicesTableService {
-  url="https://jsonplaceholder.typicode.com/users" ;
-  constructor(private http:HttpClient) { }
+  url = 'https://jsonplaceholder.typicode.com/users';
 
-  public getData(): Observable<Itable[]>{ //return type of observable spicfic table inteface
+  constructor(private HttpClient: HttpClient) {}
 
-    return this.http.get<Itable[]>(this.url);// here i mack get to return arry from type table interface
+  public getData(): Observable<Itable[]> {
+    //return type of observable spicfic table inteface
 
+    return this.HttpClient.get<Itable[]>(this.url); // here i mack get to return arry from type table interface
   }
-
-
 
   // ELEMENT_DATA: TableElment[] =
   // [
@@ -34,13 +31,7 @@ export class ServicesTableService {
   //   {position: 9, name: 'Fluorine', newData : 18.9984, Age: 12, Gender: 'male', AppointFor: 'Dr.', imgURL : 'dell.png'},
   //   {position: 10, name: 'Neon', newData : 20.1797, Age: 12, Gender: 'male', AppointFor: 'Dr.', imgURL : 'dell.png'},
   // ];
-
-
-
-
 }
 
-function getDat(): any {
-
-}
+function getDat(): any {}
 console.log(getDat());
