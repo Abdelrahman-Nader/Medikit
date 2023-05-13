@@ -13,7 +13,7 @@ export class ServicesTableService {
   constructor(private HttpClient: HttpClient) {}
 
   public getData(): Observable<Itable[]> {
-    //return type of observable spicfic table inteface
+    //return type of observable spicfic table interface
 
     return this.HttpClient.get<Itable[]>(this.url); // here i mack get to return arry from type table interface
   }
