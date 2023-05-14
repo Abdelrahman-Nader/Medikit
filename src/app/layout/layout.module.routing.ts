@@ -1,3 +1,4 @@
+import { LayoutModule } from './layout.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: () => import('../login/login.module').then(mod => mod.LoginModule),
+      },
+      {
+        path: 'payment',
+        loadChildren: () => import('./payment/payment.module').then(mod => mod.PaymentModule),
       },
     ]
   }

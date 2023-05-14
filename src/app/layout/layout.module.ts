@@ -1,3 +1,4 @@
+import { PaymentRoutingModule } from './payment/payment.module.routing';
 import { MatTableModule } from '@angular/material/table';
 import { DashbordModule } from './dashbord/dashbord.module';
 import { FooterModule } from './../shared/componets/footer/footer.module';
@@ -32,6 +33,7 @@ import { LoginRoutingModule } from '../login/login.module.routing';
     // SharedModule,
     LayoutRoutingModule,
     LoginRoutingModule,
+    PaymentRoutingModule,
     TopNavModule,
     SideNavModule,
     FooterModule,
@@ -52,6 +54,7 @@ import { LoginRoutingModule } from '../login/login.module.routing';
   declarations: [
     LayoutComponent,
     NavComponent,
+
 
     // NavComponent,
   ],
