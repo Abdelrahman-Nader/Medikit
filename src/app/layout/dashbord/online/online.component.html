@@ -5,37 +5,51 @@
   <span class="view"> view all </span>
 </div>
 <div class="table2">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">//mat-table it a dirctive biltIn angular
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>//mat-table it a dirctive biltIn angular
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- id Column -->
   <ng-container matColumnDef="id">//ng-container in dom it is replaced by what is within it
-    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
     <td mat-cell *matCellDef="let element">{{ element.id }}</td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
     <td mat-cell *matCellDef="let element">{{ element.name }}</td>
   </ng-container>
 
   <!-- Date Column -->
   <ng-container matColumnDef="username">
-    <th mat-header-cell *matHeaderCellDef>user</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>user</th>
     <td mat-cell *matCellDef="let element">{{ element.username }}</td>
   </ng-container>
 
   <!-- email Column -->
   <ng-container matColumnDef="email">//ng-container in dom it is replaced by what is within it
 
-    <th mat-header-cell *matHeaderCellDef>email</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>email</th>
     <td mat-cell *matCellDef="let element">{{ element.email }}</td>
   </ng-container>
   <ng-container matColumnDef="city">
-    <th mat-header-cell *matHeaderCellDef>city</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>city</th>
     <td mat-cell *matCellDef="let element">{{ element.address.city }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="links">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>links</th>
+    <td mat-cell *matCellDef="let element">
+      <mat-icon color="primary" (click)="editRow(element)">edit</mat-icon>
+      <mat-icon color="warn">delete</mat-icon>
+    </td>
   </ng-container>
   <!-- <ng-container matColumnDef="AppointFor">
     <th mat-header-cell *matHeaderCellDef>AppointFor</th>
@@ -49,9 +63,11 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-<!-- <mat-paginator [pegeSizeOptions]="[5, 10, 20]"
-[length]="100"
-[pegeSize]="5">
-</mat-paginator> -->
+<mat-paginator [length]="100"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+
 </div>
 </div>

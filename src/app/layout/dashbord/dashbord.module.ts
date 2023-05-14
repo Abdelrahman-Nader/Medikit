@@ -11,14 +11,12 @@ import { CounterComponent } from './counter/counter.component';
 import { ReportComponent } from './report/report.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LayoutModule } from '../layout.module';
 import { OnlineComponent } from './online/online.component';
-import { Chart } from 'chart.js';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 // import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome'
 

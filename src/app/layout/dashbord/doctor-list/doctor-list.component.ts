@@ -15,25 +15,25 @@ export class DoctorListComponent implements OnInit {
       photo: 'photo (2).png',
       name: 'islam',
       nots: 'Doctors joined this week',
-      matIcon: 'more.png',
+      matIcon: 'more_vert',
     },
     {
       photo: 'photo (3).png',
       name: 'Ahmed',
       nots: 'Doctors joined this week',
-      matIcon: 'more.png',
+      matIcon: 'more_vert',
     },
     {
       photo: 'photo (4).png',
       name: 'Abdo',
       nots: 'Doctors joined this week',
-      matIcon: 'more.png',
+      matIcon: 'more_vert',
     },
     {
       photo: 'photo (5).png',
       name: 'Gasser',
       nots: 'Doctors joined this week',
-      matIcon: 'more.png',
+      matIcon: 'more_vert',
     },
   ];
 

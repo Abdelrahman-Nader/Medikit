@@ -8,6 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Itable } from 'src/app/itable';
 import { ServicesTableService } from 'src/app/services/services-table.service';
@@ -23,12 +24,16 @@ import { TableElment } from 'src/app/table-elment';
 })
 export class OnlineComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator  = new MatPaginator(new MatPaginatorIntl(), ChangeDetectorRef.prototype);
+  //
+  @ViewChild(MatSort)
+  sort: MatSort = new MatSort;
   displayedColumns: string[] = [
     'id',
     'name',
     'username',
     'email',
     'city',
+    'links',
   ];
   dataSource: any;
   iconUrl: any;
@@ -38,10 +43,19 @@ export class OnlineComponent implements OnInit {
     this.Services.getData().subscribe((data) => {
       this.dataSource = new MatTableDataSource<Itable>(data);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort =this.sort;
 
     });
 
     console.log(this.dataSource);
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  editRow(element: any) {
+    console.log(element);
   }
 
 }

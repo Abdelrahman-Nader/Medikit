@@ -8,9 +8,10 @@
     [opened]="isHandsets === false"
   >
     <mat-toolbar routerLink="/home" (click)="isOpen()">
+      <!-- <mat-icon svgIcon="baby"></mat-icon> -->
       <!-- <mat-icon aria-label="Side nav toggle icon">home</mat-icon> -->
       <img src="./assets/imge/logo.png" alt="logo" />
-      <span (click)="isOpen()">MediKit </span>
+      <span (click)="isOpen()"> <b>MediKit </b></span>
     </mat-toolbar>
 
     <mat-nav-list>
@@ -24,10 +25,13 @@
       <!-- <li mat-button routerLink="/dashboard" class="over-view">
         <mat-icon>view_quilt</mat-icon>
         over view
+        <span class="material-symbols-outlined">
+stethoscope
+</span>
       </li> -->
       <li>
         <button mat-button>
-          <mat-icon>man</mat-icon>
+          <mat-icon>stethoscope</mat-icon>
           Doctor
         </button>
       </li>
@@ -41,7 +45,7 @@
       <mat-divider></mat-divider>
       <li>
         <button mat-button>
-          <mat-icon>event_note</mat-icon>
+          <mat-icon>schema</mat-icon>
           Department
         </button>
       </li>
@@ -49,14 +53,14 @@
       <mat-divider></mat-divider>
       <li>
         <button mat-button>
-          <mat-icon>assignment</mat-icon>
+          <mat-icon>event_note</mat-icon>
           Appointment
         </button>
       </li>
       <mat-divider></mat-divider>
       <li>
         <button mat-button>
-          <mat-icon>person</mat-icon>
+          <mat-icon>wallet</mat-icon>
           pharmacy
         </button>
       </li>
@@ -67,7 +71,36 @@
           payment
         </button>
       </li>
+      <mat-divider class="pad"></mat-divider>
+      <li>
+        <button mat-button >
+          <mat-icon>report</mat-icon>
+          report
+        </button>
+      </li>
+      <mat-divider></mat-divider>
+      <li>
+        <button mat-button >
+          <mat-icon>description</mat-icon>
+          Notice
+        </button>
+      </li>
+      <mat-divider></mat-divider>
+      <li>
+        <button mat-button >
+          <mat-icon>settings</mat-icon>
+          settings
+        </button>
+      </li>
     </mat-nav-list>
+
+    <div class="add-new-data"  fxLayout="column" fxLayoutAlign="space-around center">
+      <mat-icon>folder_open</mat-icon>
+      <p> Add New Category or Database</p>
+      <button mat-button >
+       + Create New
+      </button>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar
