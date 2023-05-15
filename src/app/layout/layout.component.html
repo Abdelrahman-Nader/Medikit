@@ -14,14 +14,14 @@
       <span (click)="isOpen()"> <b>MediKit </b></span>
     </mat-toolbar>
 
-    <mat-nav-list>
+    <div class="mat-nav-list">
       <li>
         <button mat-button routerLink="/dashboard">
           <mat-icon>view_quilt</mat-icon>
           over view
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <!-- <li mat-button routerLink="/dashboard" class="over-view">
         <mat-icon>view_quilt</mat-icon>
         over view
@@ -31,40 +31,40 @@ stethoscope
       </li> -->
       <li>
         <button mat-button>
-          <mat-icon>stethoscope</mat-icon>
+          <mat-icon svgIcon="doctor"></mat-icon>
           Doctor
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button>
           <mat-icon>person</mat-icon>
           patient
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button>
-          <mat-icon>schema</mat-icon>
+          <mat-icon svgIcon="scheme"></mat-icon>
           Department
         </button>
       </li>
 
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button>
           <mat-icon>event_note</mat-icon>
           Appointment
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button>
           <mat-icon>wallet</mat-icon>
           pharmacy
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button routerLink="/payment">
           <mat-icon>credit_card</mat-icon>
@@ -74,27 +74,27 @@ stethoscope
       <mat-divider class="pad"></mat-divider>
       <li>
         <button mat-button >
-          <mat-icon>report</mat-icon>
+          <mat-icon svgIcon="scheme"></mat-icon>
           report
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button >
           <mat-icon>description</mat-icon>
           Notice
         </button>
       </li>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <li>
         <button mat-button >
-          <mat-icon>settings</mat-icon>
+          <mat-icon>settings_outlined</mat-icon>
           settings
         </button>
       </li>
-    </mat-nav-list>
+    </div>
 
-    <div class="add-new-data"  fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="add-new-data"  fxLayout="column" fxLayoutAlign="space-evenly center">
       <mat-icon>folder_open</mat-icon>
       <p> Add New Category or Database</p>
       <button mat-button >

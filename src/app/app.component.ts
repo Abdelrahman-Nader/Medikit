@@ -15,6 +15,11 @@ export class AppComponent {
     private readonly sanitizer: DomSanitizer
   ) {
     this.matIconRegistry.addSvgIcon('baby', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/baby.svg'));
-    this.matIconRegistry.addSvgIcon('baby2', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/baby2.svg'));
+    this.matIconRegistry.addSvgIcon('doctor', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/doctor.svg'));
+    this.matIconRegistry.addSvgIcon('lavatory', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/lavatory.svg'));
+    this.matIconRegistry.addSvgIcon('open-folder', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/open-folder.svg'));
+    this.matIconRegistry.addSvgIcon('quarter', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/quarter.svg'));
+    this.matIconRegistry.addSvgIcon('schedule', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/schedule.svg'));
+    this.matIconRegistry.addSvgIcon('scheme', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/scheme.svg'));
   }
 }

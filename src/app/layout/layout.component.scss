@@ -13,7 +13,10 @@
 .mat-nav-list{
   margin: 0 0 60px 0;
     padding: 10px 0 0 10px;
-    color: #7c7c7c;
+    color: #a8a8a8;
+}
+.sidenav{
+  width: 200px;
 }
 
 .mat-toolbar.mat-primary {
@@ -106,7 +109,7 @@ li {
   // flex-direction: row;
 }
 .mat-nav-list.mat-nav-list.mat-list-base.ng-tns-c296-0 {
-  color: #606060d9;
+  color: #b8b8b8;
 }
 .overView:hover {
   color: white;
@@ -130,7 +133,7 @@ li:hover {
   /* position: relative; */
   /* display: block; */
   // transition: 0.3s;
-  width: 80%;
+  width: 90%;
 }
 .topmenu {
   background-color: rgb(255, 255, 255);
@@ -151,6 +154,22 @@ li:hover {
   margin: 20px 0 20px 0;
 }
 .add-new-data{
-  background-color: #1c7ece;
+  background-color: #f5faff;
+  width: 160px;
+  height: 160px;
+  margin: 0 0 0 10px;
+  border-radius: 5%;
+  padding: 5px;
+}
+.add-new-data>p, button {
+  width: 115px;
+    text-align: center;
+    margin: 0;
+
+}
+.add-new-data> button {
+  width: 120px;
+  background-color: #359cff;
+  color: white;
 }
 

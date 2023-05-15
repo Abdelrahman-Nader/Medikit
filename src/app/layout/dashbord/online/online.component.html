@@ -6,10 +6,10 @@
 </div>
 <div class="table2">
 
-  <mat-form-field>
+  <!-- <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-  </mat-form-field>
+  </mat-form-field> -->
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>//mat-table it a dirctive biltIn angular
   <!--- Note that these columns can be defined in any order.
@@ -63,11 +63,11 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-<mat-paginator [length]="100"
+<!-- <mat-paginator [length]="100"
               [pageSize]="5"
               [pageSizeOptions]="[5, 10, 25, 100]"
               aria-label="Select page">
-</mat-paginator>
+</mat-paginator> -->
 
 </div>
 </div>

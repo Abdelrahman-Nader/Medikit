@@ -1,6 +1,6 @@
 .container{
   max-height: 200px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 :host{
   margin: 0px;
@@ -24,5 +24,9 @@ h4 {
   .slogan{
     font-size: x-small;
   }
+}
+.svgIcon{
+  width: 20px;
+  height: 20px;
 }
 
