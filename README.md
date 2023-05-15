@@ -1,5 +1,21 @@
 # Medikit
 
+329dff
+22bebb
+fb8718
+f5faff
+f0f9ff
+359cff
+f7f7f7 الخلفييه
+ffffff
+c8c8c8
+e7e7e9
+20b5c9
+f08e2b
+1f9af8
+fb881d
+b8b8b8
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 ## Development server
