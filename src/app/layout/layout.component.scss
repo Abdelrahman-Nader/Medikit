@@ -96,8 +96,9 @@ li {
 .pragra:hover {
   box-sizing: border-box;
   cursor: pointer;
-  width: fit-content;
+  // width: fit-content;
   size: 20px;
+  border: none;
 
 }
 .search {
@@ -134,6 +135,20 @@ li:hover {
   /* display: block; */
   // transition: 0.3s;
   width: 90%;
+}
+li:hover ::after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  right: 119px;
+  /* color: black; */
+  background: #1c7ece;
+  /* border: 1px solid red; */
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+
 }
 .topmenu {
   background-color: rgb(255, 255, 255);

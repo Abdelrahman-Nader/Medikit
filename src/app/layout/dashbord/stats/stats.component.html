@@ -1,19 +1,24 @@
 <div fxLayout="column" class="container">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="success">
-    <h3 class="head-line">Success Stats</h3>
+    <h3 class="head-line"><b>Success Stats</b></h3>
     <span class="view"
       >
-      <!-- <mat-form-field appearance="fill">
-        <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" />
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle
-          matIconSuffix
-          [for]="picker"
-        ></mat-datepicker-toggle>
+      <div  class="filed">
+      <mat-form-field appearance="fill">
+
+        <!-- <mat-label>Choose a date</mat-label> -->
+        <div  class="pikup">
+        <input matInput [matDatepicker]="picker">
+        <div class="mdt">
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon class="iconarrow">keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+      </div>
+      </div>
+        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field> -->
-      view all
+      </mat-form-field>
+    </div>
     </span>
   </div>
   <div fxLayoutAlign="space-between center" fxFlex="ltr" class="marg">

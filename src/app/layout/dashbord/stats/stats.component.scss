@@ -17,7 +17,7 @@
 }
 .head-line-1{
   margin: 0;
-  color: rgb(187, 187, 187);
+  color: rgb(139, 139, 139);
 }
 .marg{
   margin-bottom: 30px;
@@ -28,4 +28,69 @@
 .container{
   max-height: 300px;
   // overflow-y: scroll;
+}
+
+// .mat-form-field-flex.ng-tns-c175-2{
+//   height: 20px;
+//   width: 100px;
+//   /* border-radius: 11px; */
+//   /* border: #6c4a20 solid 1px; */
+//   padding: 0px;
+//   margin: 0px;
+// }
+
+
+// .filed{
+//   display: inline-block;
+//     position: relative;
+//     text-align: right;
+
+// }
+// .pikup {
+//   padding: 0;
+//   height: 44px;
+//   background-color: cornsilk;
+//   border-radius: 10px;
+//   border: 1px solid blue;
+
+// }
+// .mdt{
+//   height: 20px;
+//     width: 100px;
+//     background: white;
+//     border: 1px solid;
+//     border-radius: 10px;
+
+// }
+// .iconarrow{
+//   font-size: 30px;
+//   font-weight: bold;
+//   padding: 0 0 0 5px;
+//   position: absolute;
+//   // right: -129px;
+//   left: 139px;
+//   top: 0px;
+//   // bottom: 50px;
+// }
+// .mat-button-ripple.mat-ripple, .mat-button-focus-overlay {
+//   position: absolute;
+//   right: -129px;
+//   left: 143px;
+//   top: -36px;
+//   bottom: 50px;
+// }
+// ::ng-deep span.mat-button-focus-overlay{
+//   position: absolute;
+//   right: -129px;
+//   left: 143px;
+//   top: -36px;
+//   bottom: 50px;
+//   background-color: aqua;
+// }
+::ng-deep .mat-progress-bar .mat-progress-bar-fill::after {
+  animation: none;
+  content: "";
+  display: inline-block;
+  left: 0;
+  background-color:#359cff;
 }

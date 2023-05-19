@@ -1,3 +1,5 @@
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { PaymentRoutingModule } from './payment/payment.module.routing';
 import { MatTableModule } from '@angular/material/table';
 import { DashbordModule } from './dashbord/dashbord.module';
@@ -22,6 +24,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NavComponent } from './nav/nav.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginRoutingModule } from '../login/login.module.routing';
+import { MatNativeDateModule } from '@angular/material/core';
 // import { Chart } from 'chart.js';
 
 @NgModule({
@@ -48,6 +51,9 @@ import { LoginRoutingModule } from '../login/login.module.routing';
     MatMenuModule,
     FlexLayoutModule,
     MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
     // Chart,
 
   ],
