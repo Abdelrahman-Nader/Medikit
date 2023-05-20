@@ -6,10 +6,10 @@
 </div>
 <div class="table2">
 
-  <!-- <mat-form-field>
+  <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-  </mat-form-field> -->
+  </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>//mat-table it a dirctive biltIn angular
   <!--- Note that these columns can be defined in any order.
@@ -51,14 +51,14 @@
       <mat-icon color="warn">delete</mat-icon>
     </td>
   </ng-container>
-  <!-- <ng-container matColumnDef="AppointFor">
+  <ng-container matColumnDef="AppointFor">
     <th mat-header-cell *matHeaderCellDef>AppointFor</th>
     <td mat-cell *matCellDef="let element">{{ element.AppointFor }}</td>
   </ng-container>
   <ng-container matColumnDef="imgURL">
     <th mat-header-cell *matHeaderCellDef>Setting</th>
     <td mat-cell *matCellDef="let element">{{element.imgURL}} </td>
-  </ng-container> -->
+  </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

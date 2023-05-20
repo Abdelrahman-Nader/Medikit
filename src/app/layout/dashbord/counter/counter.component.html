@@ -1,19 +1,19 @@
-<mat-card fxlayout="row"  >
+<mat-card fxlayout="row" *ngIf="data" >
   <div fxLayoutAlign="start center">
-    <img src="./assets/imge/{{ data.icon }}" alt="photo" />
+    <img src="./assets/imge/{{ data?.icon }}" alt="photo" />
     <mat-card-header>
     <mat-card-title>
-      {{data.value}}
+      {{data?.value}}
     </mat-card-title>
     <mat-card-subtitle>
-      {{data.title}}
+      {{data?.title}}
     </mat-card-subtitle>
 </mat-card-header>
 </div>
 <div fxlayout="row">
-  <span> {{data.idNum}}</span>
+  <span [class]="data?.custClass"> {{data?.idNum}}</span>
   <mat-card-content>
-    {{ data.nots }}
+    {{ data?.nots }}
   </mat-card-content>
 </div>
 </mat-card>

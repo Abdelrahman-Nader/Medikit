@@ -142,8 +142,8 @@ stethoscope
           <mat-icon> textsms</mat-icon>
           <img src="./assets/imge/photo (1).png" alt="photo" />
           <div fxFlex fxLayout="column" fxLayoutAlign="start enter"  fxFlexAlign="auto" class="admin">
-            <span class="dr-name"> Dr.{{ docList.nameOne }} </span>
-            <span class="dr-admin"> Admin {{ docList.posittion }} </span>
+            <span class="dr-name"> Dr.{{ docList[0].nameOne }} </span>
+            <span class="dr-admin"> {{ docList[0].posittion }} </span>
           </div>
 
           <button mat-button [matMenuTriggerFor]="menu" fxflex>

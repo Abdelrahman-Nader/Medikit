@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IdataCount } from 'src/app/IdataCount';
 
 @Component({
   selector: 'app-counter',
@@ -16,36 +17,9 @@ export class CounterComponent implements OnInit {
 
 
   constructor() {  }
-  @Input() data:any = [
-    {
-      icon: 'doctors.png',
-      title: 'Doctors',
-      nots: 'Doctors joined this week',
-      value: 2937,
-      idNum: 3,
-    },
-    {
-      icon: 'staffs.png',
-      title: 'Staffs',
-      nots: 'Staffs on vacation',
-      value: 5453,
-      idNum: 8,
-    },
-    {
-      icon: 'patients.png',
-      title: 'Patients',
-      nots: 'New patients admitted',
-      value: 170+'k',
-      idNum: 175,
-    },
-    {
-      icon: 'pharamcy.png',
-      title: 'Pharamcies',
-      nots: 'Medicine on reserve',
-      value: 21,
-      idNum: 85,
-    },
-  ];
+  @Input() data!:IdataCount;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 }

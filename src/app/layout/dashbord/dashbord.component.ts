@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { IdataCount } from 'src/app/IdataCount';
 
 
 @Component({
@@ -11,36 +12,7 @@ export class DashbordComponent implements OnInit {
   icon: string =
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />';
 
-  @Output() arr: any = [
-    {
-      icon: 'doctors.png',
-      title: 'Doctors',
-      nots: 'Doctors joined this week',
-      value: 2937,
-      idNum: 3,
-    },
-    {
-      icon: 'staffs.png',
-      title: 'Staffs',
-      nots: 'Staffs on vacation',
-      value: 5453,
-      idNum: 8,
-    },
-    {
-      icon: 'patients.png',
-      title: 'Patients',
-      nots: 'New patients admitted',
-      value: 170+'K',
-      idNum: 175,
-    },
-    {
-      icon: 'pharamcy.png',
-      title: 'Pharamcies',
-      nots: 'Medicine on reserve',
-      value: 21,
-      idNum: 85+'K',
-    },
-  ];
+    data!:Array<IdataCount>
   // @Output()  data2: any = [
   //   {
   //     photo: 'photo (2).png',
@@ -92,5 +64,40 @@ export class DashbordComponent implements OnInit {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = [
+      {
+        icon: 'doctors.png',
+        title: 'Doctors',
+        nots: 'Doctors joined this week',
+        value: '2937',
+        idNum: 3,
+        custClass: 'red-color',
+      },
+      {
+        icon: 'staffs.png',
+        title: 'Staffs',
+        nots: 'Staffs on vacation',
+        value: '5453',
+        idNum: 8,
+        custClass: 'green-color',
+      },
+      {
+        icon: 'patients.png',
+        title: 'Patients',
+        nots: 'New patients admitted',
+        value: '170'+'k',
+        idNum: 175,
+        custClass: '',
+      },
+      {
+        icon: 'pharamcy.png',
+        title: 'Pharamcies',
+        nots: 'Medicine on reserve',
+        value: '21',
+        idNum: 85,
+        custClass: '',
+      },
+    ];
+  }
 }

@@ -13,56 +13,7 @@
         'color': item.title=='Staffs'? 'yellow' : 'black',
         'color': item.title=='Doctors'? 'gray' : 'black',
       }"-->
-  <div *ngIf="" class="row-count" fxFlex="20">
-    <!-- <mat-card fxFlex>Doctors</mat-card>  [ngStyle]="{
 
-        'color': item.title=='Doctors'? 'gray' : 'black',
-      }" -->
-    <app-counter
-      icon="doctors.png"
-      title="Doctors"
-      nots="Doctors joined this week"
-      idNum="3"
-
-    ></app-counter>
-    <!-- <mat-card fxFlex>staffs</mat-card>
-      [ngStyle]="{
-        'color': item.title=='Staffs'? 'yellow' : 'black',
-      }" -->
-    <app-counter
-      fxFlex="30"
-      icon="staffs.png"
-      title="Staffs"
-      nots="Staffs on vacation"
-      idNum="8"
-
-    ></app-counter>
-    <!-- <mat-card fxFlex>patients</mat-card>
-      [ngStyle]="{
-        'color': item.title=='Patients'? 'green' : 'black',
-      }"-->
-    <app-counter
-      fxFlex="30"
-      icon="patients.png"
-      title="Patients"
-      nots="New patients admitted"
-      idNum="175"
-
-    ></app-counter>
-    <!-- <mat-card >pharmacies</mat-card>
-        [ngStyle]="{
-        'color': item.title=='Pharamcies'? 'red'  : 'black',
-      }"-->
-    <app-counter
-      fxFlex="30"
-      icon="pharamcy.png"
-      title="Pharamcies"
-      nots="Medicine on reserve"
-      idNum="85"
-
-
-    ></app-counter>
-  </div>
 
   <div
     fxFlex="20"
@@ -71,11 +22,11 @@
     fxLayoutAlign="space-between center"
     class="row-count"
   >
+
     <app-counter
-      *ngFor="let item of arr"
+      *ngFor="let item of data"
       [data]="item"
       fxFlex
-
 
     ></app-counter>
   </div>
