@@ -20,14 +20,34 @@
   color: rgb(139, 139, 139);
 }
 .marg{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .success{
   margin-bottom: 30px;
 }
 .container{
-  max-height: 300px;
+  // max-height: 300px;
   // overflow-y: scroll;
+}
+input#mat-input-0{
+  max-width: 30%;
+  border-radius: 6px;
+  border: 2px solid red;
+  position: relative;
+  right: -85px;
+  padding: 6px;
+}
+mat-datepicker-toggle.mat-datepicker-toggle{
+  position: relative;
+    right: -9px;
+    top: -15px;
+    width: 10px;
+    height: 10px
+}
+svg.mat-datepicker-toggle-default-icon.ng-star-inserted{
+  width: 20px;
+    position: relative;
+    top: 0px;
 }
 
 // .mat-form-field-flex.ng-tns-c175-2{
