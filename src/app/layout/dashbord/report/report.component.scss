@@ -19,7 +19,9 @@ h4 {
 }
 .room{
   margin-top: 15px;
-  margin-bottom: 15px;
+    margin-bottom: 40px;
+    transition: 0.3s ;
+
 
   .slogan{
     font-size: x-small;
@@ -33,4 +35,12 @@ mat-icon{
   width: 20px;
   height: 20px;
 }
-
+.size-img {
+  max-width: 25px !important;
+  margin-right: 25px !important;
+}
+.room :hover{
+  transform: scale3d(1.05, 1.05, 1.05);
+  transition: 0.3s ease-in-out;
+  box-shadow: 4px 5px rgba(242, 241, 241, 0.3294117647);
+}

@@ -13,54 +13,6 @@ export class DashbordComponent implements OnInit {
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />';
 
     data!:Array<IdataCount>
-  // @Output()  data2: any = [
-  //   {
-  //     photo: 'photo (2).png',
-  //     name: 'islam',
-  //     nots: 'Doctors joined this week',
-  //     matIcon: 'more.png',
-  //   },
-  //   {
-  //     photo: 'photo (3).png',
-  //     name: 'Ahmed',
-  //     nots: 'Doctors joined this week',
-  //     matIcon: 'more.png',
-  //   },
-  //   {
-  //     photo: 'photo (4).png',
-  //     name: 'Abdo',
-  //     nots: 'Doctors joined this week',
-  //     matIcon: 'more.png',
-  //   },
-  //   {
-  //     photo: 'photo (5).png',
-  //     name: 'Gasser',
-  //     nots: 'Doctors joined this week',
-  //     matIcon: 'more.png',
-  //   },
-  // ];
-  // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-  //   map(({ matches }) => {
-  //     if (matches) {
-  //       return [
-  //         { title: 'Doctors', cols: 1, rows: 1 },
-  //         { title: 'Card 2', cols: 1, rows: 1 },
-  //         { title: 'Card 3', cols: 1, rows: 1 },
-  //         { title: 'Card 4', cols: 1, rows: 1 },
-  //         { title: 'Card 5', cols: 1, rows: 1 }
-  //       ];
-  //     }
-
-  //     return [
-  //       { title: 'Doctors', cols: 2, rows: 1 },
-  //       { title: 'Card 2', cols: 1, rows: 1 },
-  //       { title: 'Card 3', cols: 1, rows: 2 },
-  //       { title: 'Card 4', cols: 1, rows: 1 },
-  //       { title: 'Card 5', cols: 2, rows: 1 }
-  //     ];
-  //   })
-  // );
-
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -88,7 +40,7 @@ export class DashbordComponent implements OnInit {
         nots: 'New patients admitted',
         value: '170'+'k',
         idNum: 175,
-        custClass: '',
+        custClass: 'blue-color',
       },
       {
         icon: 'pharamcy.png',
@@ -96,7 +48,7 @@ export class DashbordComponent implements OnInit {
         nots: 'Medicine on reserve',
         value: '21',
         idNum: 85,
-        custClass: '',
+        custClass: 'black-color',
       },
     ];
   }

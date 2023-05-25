@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -23,10 +24,13 @@ import { TableElment } from 'src/app/table-elment';
   styleUrls: ['./online.component.scss'],
 })
 export class OnlineComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator  = new MatPaginator(new MatPaginatorIntl(), ChangeDetectorRef.prototype);
+  @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(
+    new MatPaginatorIntl(),
+    ChangeDetectorRef.prototype
+  );
   //
   @ViewChild(MatSort)
-  sort: MatSort = new MatSort;
+  sort: MatSort = new MatSort();
   displayedColumns: string[] = [
     'id',
     'name',
@@ -37,25 +41,24 @@ export class OnlineComponent implements OnInit {
   ];
   dataSource: any;
   iconUrl: any;
+  element: string[] = [];
 
-  constructor(private Services: ServicesTableService) {}
+  constructor(private Services: ServicesTableService, http: HttpClientModule) {}
   ngOnInit(): void {
     this.Services.getData().subscribe((data) => {
       this.dataSource = new MatTableDataSource<Itable>(data);
       this.dataSource.paginator = this.paginator;
-      this.dataSource.sort =this.sort;
-
+      this.dataSource.sort = this.sort;
     });
-
-    console.log(this.dataSource);
   }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
+
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  editRow(element: any) {
-    console.log(element);
+  editRow(links: HTMLTableRowElement, http: HttpClientModule) {
+    // this.Services.url.getData()= new MatTableDataSource<Itable>(data)
   }
-
 }

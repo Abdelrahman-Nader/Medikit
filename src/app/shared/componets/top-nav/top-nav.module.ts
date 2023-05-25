@@ -2,6 +2,7 @@ import { TopNavComponent } from './top-nav.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../module/material.module';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MaterialModule } from '../../module/material.module';
   imports: [
     CommonModule,
     MaterialModule,
+    RouterOutlet,
   ]
 })
 

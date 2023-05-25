@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { MaterialModule } from '../shared/module/material.module';
+import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
+import { TopNavModule } from '../shared/componets/top-nav/top-nav.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,9 @@ import { MaterialModule } from '../shared/module/material.module';
     MaterialModule,
     LoginRoutingModule,
     RouterModule,
+
+    TopNavModule,
+
   ],
 })
 

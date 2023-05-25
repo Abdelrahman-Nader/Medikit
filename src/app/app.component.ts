@@ -20,6 +20,6 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('open-folder', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/open-folder.svg'));
     this.matIconRegistry.addSvgIcon('quarter', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/quarter.svg'));
     this.matIconRegistry.addSvgIcon('schedule', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/schedule.svg'));
-    this.matIconRegistry.addSvgIcon('scheme', this.sanitizer.bypassSecurityTrustResourceUrl('assets/svg/scheme.svg'));
+    this.matIconRegistry.addSvgIcon('scheme', this.sanitizer.bypassSecurityTrustResourceUrl('../assets/svg/scheme.svg'));
   }
 }

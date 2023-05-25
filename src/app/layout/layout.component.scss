@@ -157,6 +157,24 @@ li:hover ::after{
   // z-index: 9999;
   width: calc(100%);
 }
+.size-img {
+  max-width: 25px !important;
+  color: #a8a8a8 !important;
+  // margin-right: 25px !important;
+}
+li.size-img:hover {
+  color: white;
+  background-color: #1c7ece;
+  border: solid 1px white;
+  border-radius: 10px;
+  margin: 0%;
+  padding: 0%;
+  /* position: relative; */
+  /* display: block; */
+  // transition: 0.3s;
+  width: 90%;
+}
+
 
 .main-content {
   // position: fixed;

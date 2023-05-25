@@ -1,1 +1,89 @@
-<p>sign-in works!</p>
+<div>
+  <mat-toolbar
+    color="white"
+    fxLayout="row"
+    fxLayoutGap="10px"
+    fxLayoutAlign="space-between center"
+    class="topmenu"
+    *ngIf="isHandsets"
+
+
+  >
+    <div
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="3px"
+      class="search"
+
+
+    >
+      <mat-icon
+        aria-label="Side nav toggle icon"
+        (click)="isOpen()"
+        dir="ltr"
+        routerLink="layout"
+
+
+      >
+        menu
+      </mat-icon>
+      <mat-icon>search</mat-icon>
+      <input
+        type="text"
+        class="pragra"
+        placeholder="Search for Files, Pathient or Files"
+      />
+    </div>
+    <div class="name" *ngIf="">
+      <div fxFlex fxLayoutAlign="center center">
+        <mat-icon> textsms</mat-icon>
+        <img src="./assets/imge/photo (1).png" alt="photo" />
+        <div fxFlex fxLayout="column" fxLayoutAlign="start enter"  fxFlexAlign="auto" class="admin">
+          <span class="dr-name"> Dr.{{ docList[0].nameOne }} </span>
+          <span class="dr-admin"> {{ docList[0].posittion }} </span>
+        </div>
+
+        <button mat-button [matMenuTriggerFor]="menu" fxflex>
+          <mat-icon>expand_more</mat-icon>
+        </button>
+      </div>
+
+      <ul *ngIf="" fxLayoutGap="0px" class="ul-menu" fxFlex>
+        <mat-icon> textsms</mat-icon>
+        <img src="./assets/imge/logo.png" alt="photo" />
+        <button mat-button [matMenuTriggerFor]="menu">
+          <div fxlayout="row" class="small-menu" fxLayoutGap="0px">
+            <mat-icon>expand_more</mat-icon>
+            <mat-card-header fxlayout="row">
+              <mat-card-title> Dr </mat-card-title>
+              <mat-card-subtitle>
+                Admin
+              </mat-card-subtitle>
+            </mat-card-header>
+          </div>
+        </button>
+        <!-- <li>
+        <mat-form-field>
+          <mat-label>What's your name?</mat-label>
+          <input>
+        </mat-form-field>
+      </li> -->
+      </ul>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item >
+          <mat-icon >exit_to_app</mat-icon>
+          Sign out
+        </button>
+        <button mat-icon-button>
+          <mat-icon> settings </mat-icon>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  <div class="main-content"   fxLayout="column"
+  fxLayoutGap="10px">
+  <router-outlet></router-outlet>
+  </div>
+</div>
+
