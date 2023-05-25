@@ -20,6 +20,11 @@ const routes: Routes = [
           import('./home/home.module').then((mod) => mod.HomeModule),
       },
       {
+        path: 'home/:id',
+        loadChildren: () =>
+          import('./home/home.module').then((mod) => mod.HomeModule),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./dashbord/dashbord.module').then(
