@@ -174,7 +174,7 @@ stethoscope
         </li> -->
         </ul>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item routerLink="/login">
+          <button mat-menu-item [routerLink]="['../login']">
             <mat-icon >exit_to_app</mat-icon>
             Sign out
           </button>

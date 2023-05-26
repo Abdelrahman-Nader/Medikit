@@ -8,7 +8,7 @@ import { Itable } from '../itable';
   providedIn: 'root',
 })
 export class ServicesTableService {
-  url = 'https://jsonplaceholder.typicode.com/users';
+  url = '../data.json';
 
   constructor(private HttpClient: HttpClient) {}
 
@@ -17,6 +17,9 @@ export class ServicesTableService {
 
     return this.HttpClient.get<Itable[]>(this.url); // here i mack get to return arry from type table interface
   }
+  // getOneItem(id:number) : Itable[] {
+
+  // }
 
   // ELEMENT_DATA: TableElment[] =
   // [
