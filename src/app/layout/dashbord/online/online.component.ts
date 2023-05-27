@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -11,6 +11,7 @@ import {
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { Itable } from 'src/app/itable';
 import { ServicesTableService } from 'src/app/services/services-table.service';
 import { TableElment } from 'src/app/table-elment';
@@ -38,18 +39,21 @@ export class OnlineComponent implements OnInit {
     'email',
     'city',
     'links',
+    'delete',
   ];
-  dataSource: any;
-  iconUrl: any;
-  element: string[] = [];
+  dataSource:any ;            //Observable<TableElment[]> ;
 
-  constructor(private Services: ServicesTableService, http: HttpClientModule) {}
+  data: any;
+  constructor(private Services: ServicesTableService, http: HttpClient) {}
+
   ngOnInit(): void {
-    this.Services.getData().subscribe((data) => {
-      this.dataSource = new MatTableDataSource<Itable>(data);
+    this.Services.getData().subscribe((data: TableElment[]) => {
+      this.dataSource = JSON.stringify(data);
       this.dataSource.paginator = this.paginator;
+
       this.dataSource.sort = this.sort;
     });
+    // this.removeCart('i');
   }
 
   applyFilter(event: Event) {
@@ -58,7 +62,9 @@ export class OnlineComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  editRow(links: HTMLTableRowElement, http: HttpClientModule) {
-    // this.Services.url.getData()= new MatTableDataSource<Itable>(data)
-  }
+  //   removeCart(i:any) {
+  //     this.Services.getOneItem(i).subscribe(res=>{
+  // console.log(res)
+  //     });
+  //   }
 }

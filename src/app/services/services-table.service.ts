@@ -1,25 +1,27 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-
+import { Injectable, Pipe } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Itable } from '../itable';
+import { TableElment } from '../table-elment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServicesTableService {
-  url = '../data.json';
+  @Pipe({
+    name: 'getData',
+  })
+  url = '../../assets/data.json'; //https://jsonplaceholder.typicode.com/users
+  id = '';
+  link = [];
+  constructor(private http: HttpClient) {}
 
-  constructor(private HttpClient: HttpClient) {}
+  public getData(): Observable<TableElment[]> {    //return type of observable spicfic table interface
 
-  public getData(): Observable<Itable[]> {
-    //return type of observable spicfic table interface
-
-    return this.HttpClient.get<Itable[]>(this.url); // here i mack get to return arry from type table interface
+    return this.http.get<TableElment[]>(this.url).pipe(this.getData); // here i mack get to return arry from type table interface
   }
-  // getOneItem(id:number) : Itable[] {
-
-  // }
+  getOneItem(id: any) {
+    return this.http.get<TableElment[]>('../data.json' + id);
+  }
 
   // ELEMENT_DATA: TableElment[] =
   // [
@@ -35,6 +37,3 @@ export class ServicesTableService {
   //   {position: 10, name: 'Neon', newData : 20.1797, Age: 12, Gender: 'male', AppointFor: 'Dr.', imgURL : 'dell.png'},
   // ];
 }
-
-function getDat(): any {}
-console.log(getDat());

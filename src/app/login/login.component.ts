@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -13,11 +14,14 @@ export class LoginComponent implements OnInit {
       posittion: 'admin',
     }
   ];
-  constructor() { }
+  constructor(private location:Location) { }
 
   ngOnInit(): void {
   }
   isOpen() {
     this.isHandsets = !this.isHandsets;
+  }
+  goBack(){
+    this.location.back()
   }
 }
