@@ -6,8 +6,6 @@
     fxLayoutAlign="space-between center"
     class="topmenu"
     *ngIf="isHandsets"
-
-
   >
     <div
       fxFlex
@@ -15,16 +13,13 @@
       fxLayoutAlign="start center"
       fxLayoutGap="3px"
       class="search"
-
-
     >
       <mat-icon
         aria-label="Side nav toggle icon"
         (click)="isOpen()"
         dir="ltr"
-        routerLink="layout"
 
-
+        (click)="goBack()"
       >
         menu
       </mat-icon>
@@ -39,7 +34,13 @@
       <div fxFlex fxLayoutAlign="center center">
         <mat-icon> textsms</mat-icon>
         <img src="./assets/imge/photo (1).png" alt="photo" />
-        <div fxFlex fxLayout="column" fxLayoutAlign="start enter"  fxFlexAlign="auto" class="admin">
+        <div
+          fxFlex
+          fxLayout="column"
+          fxLayoutAlign="start enter"
+          fxFlexAlign="auto"
+          class="admin"
+        >
           <span class="dr-name"> Dr.{{ docList[0].nameOne }} </span>
           <span class="dr-admin"> {{ docList[0].posittion }} </span>
         </div>
@@ -57,9 +58,7 @@
             <mat-icon>expand_more</mat-icon>
             <mat-card-header fxlayout="row">
               <mat-card-title> Dr </mat-card-title>
-              <mat-card-subtitle>
-                Admin
-              </mat-card-subtitle>
+              <mat-card-subtitle> Admin </mat-card-subtitle>
             </mat-card-header>
           </div>
         </button>
@@ -71,8 +70,8 @@
       </li> -->
       </ul>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item >
-          <mat-icon >exit_to_app</mat-icon>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
           Sign out
         </button>
         <button mat-icon-button>
@@ -81,9 +80,7 @@
       </mat-menu>
     </div>
   </mat-toolbar>
-  <div class="main-content"   fxLayout="column"
-  fxLayoutGap="10px">
-  <router-outlet></router-outlet>
+  <div class="main-content" fxLayout="column" fxLayoutGap="10px">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
