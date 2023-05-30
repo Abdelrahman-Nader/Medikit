@@ -2,28 +2,28 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Pipe } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TableElment } from '../table-elment';
+import { Itable } from '../itable';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServicesTableService {
-  @Pipe({
-    name: 'getData',
-  })
-  url = '../../assets/data.json'; //https://jsonplaceholder.typicode.com/users
+
+  url = '../../assets/data.json'; //
   id = '';
   link = [];
   constructor(private http: HttpClient) {}
 
   public getData(): Observable<TableElment[]> {    //return type of observable spicfic table interface
 
-    return this.http.get<TableElment[]>(this.url).pipe(this.getData); // here i mack get to return arry from type table interface
+    return this.http.get<TableElment[]>(this.url); // here i mack get to return arry from type table interface
   }
   getOneItem(id: any) {
-    return this.http.get<TableElment[]>('../data.json' + id);
-  }
+   return this.http.get<TableElment[]>(this.url+id) ;
 
-  // ELEMENT_DATA: TableElment[] =
+    }
+
+  // ELEMENT_DATA: Itable[] =
   // [
   //   {position: 1, name: 'Hydrogen', newData : 1.0079, Age: 54, Gender: 'male', AppointFor: 'Dr.', imgURL : 'dell.png'},
   //   {position: 2, name: 'Helium', newData : 4.0026, Age: 76, Gender: 'male', AppointFor: 'Dr.', imgURL : 'dell.png'},

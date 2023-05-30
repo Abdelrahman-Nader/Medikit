@@ -1,7 +1,7 @@
 export interface TableElment {
-  position: number;
+ id: number;
   name: string;
-  newData : number;
+  username : number;
   Age: number;
   Gender: string;
   AppointFor:string;
