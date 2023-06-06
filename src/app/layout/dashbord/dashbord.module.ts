@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 // import { library } from './../../../../node_modules/@fortawesome/fontawesome-svg-core/index.d';
 import { MatTableModule } from '@angular/material/table';
 import { StatsComponent } from './stats/stats.component';
@@ -18,6 +19,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+// import { addToCreateData } from '';
 // import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
@@ -33,6 +35,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
+
     // MatPaginator,
     // FontAwesomeModule,
 
@@ -53,6 +56,7 @@ import { MatSortModule } from '@angular/material/sort';
     StatsComponent,
     OnlineComponent,
     DoctorListComponent,
+
   ],
 })
 export class DashbordModule {

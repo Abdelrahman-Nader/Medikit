@@ -1,23 +1,17 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {
-  AfterViewInit,
   ChangeDetectorRef,
   Component,
-  EventEmitter,
   Input,
+  OnChanges,
   OnInit,
-  Output,
   ViewChild,
 } from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource,MatTable } from '@angular/material/table';
-import { log } from 'console';
-import { get } from 'http';
-import { url } from 'inspector';
-import { emit } from 'process';
-import { Observable } from 'rxjs';
-import { Itable } from 'src/app/itable';
+import { MatTableDataSource } from '@angular/material/table';
+import { Route } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ServicesTableService } from 'src/app/services/services-table.service';
 import { TableElment } from 'src/app/table-elment';
 // import { faFilm } from '@fortawesome/free-solid-svg-icons';
@@ -30,7 +24,6 @@ import { TableElment } from 'src/app/table-elment';
   styleUrls: ['./online.component.scss'],
 })
 export class OnlineComponent implements OnInit {
-
   @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(
     new MatPaginatorIntl(),
     ChangeDetectorRef.prototype
@@ -38,23 +31,34 @@ export class OnlineComponent implements OnInit {
   //
   @ViewChild(MatSort)
   sort: MatSort = new MatSort();
-  displayedColumns: string[] = ['id','name','username','Age','Gender','AppointFor','imgURL'];
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'username',
+    'Age',
+    'Gender',
+    'AppointFor',
+    'imgURL',
+  ];
 
-  dataSource = new MatTableDataSource<TableElment>()//Observable<TableElment[]> ;
-   oneItem: any;
-   globalData: any  =[];
-  data: any;
-  constructor(private Services: ServicesTableService, http: HttpClient) {}
+  dataSource = new MatTableDataSource<TableElment>(); //Observable<TableElment[]> ;
+  oneItem: any;
+  globalData: any = [];
+  @Input() detailsData!: TableElment;
+  constructor(
+    private Services: ServicesTableService,
+    http: HttpClient,
+    private toster: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.Services.getData().subscribe((data: TableElment[]) => {
-      this.dataSource.data= data;
+      this.dataSource.data = data;
       this.globalData = data;
-      console.log(data)
+      console.log(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
-
   }
 
   applyFilter(event: Event) {
@@ -62,20 +66,20 @@ export class OnlineComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  removeCart(index : number) {
-    this.globalData.splice(index, 1)
-    this.dataSource.data = this.globalData
-    console.log(this.globalData)
+  removeCart(index: number) {
+    if (index) {
+      this.globalData.splice(index, 1);
+      this.dataSource.data = this.globalData;
+      this.toster.warning('it was deleted');
     }
+    console.log(this.globalData);
+  }
 
-
-    edit(item: TableElment ){
-
-console.log(item)
-    }
-
-
-
+  edit(item: TableElment) {
+    this.detailsData = item;
+    console.log(this.detailsData);
+    return this.detailsData;
+  }
 
   // removeCart(i: any) {
   //   this.Services.getOneItem(++i).subscribe(res =>{
@@ -83,7 +87,10 @@ console.log(item)
   //     this.oneItem = res;
   //     this.oneItem.splice(i,1)
   //   });
-
-
-
+}
+function output(): (
+  target: OnlineComponent,
+  propertyKey: 'detailsData'
+) => void {
+  throw new Error('Function not implemented.');
 }

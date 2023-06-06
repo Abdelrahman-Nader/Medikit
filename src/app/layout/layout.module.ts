@@ -1,3 +1,4 @@
+import { AddToCreateDataModule } from './addToCreateData/addToCreateData/addToCreateData.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { PaymentRoutingModule } from './payment/payment.module.routing';
@@ -21,10 +22,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { NavComponent } from './nav/nav.component';
+// import { addToCreateData } from './addToCreateData/addToCreateData';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginRoutingModule } from '../login/login.module.routing';
 import { MatNativeDateModule } from '@angular/material/core';
+// import { ToastrModule,provideToastr } from 'ngx-toastr';
+
+
 // import { Chart } from 'chart.js';
 
 @NgModule({
@@ -37,6 +41,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     LayoutRoutingModule,
     LoginRoutingModule,
     PaymentRoutingModule,
+    AddToCreateDataModule,
     TopNavModule,
     SideNavModule,
     FooterModule,
@@ -53,13 +58,18 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+
+    // ToastrModule,
+    // provideToastr,
+
     // Chart,
+
 
   ],
   declarations: [
     LayoutComponent,
-    NavComponent,
+    // addToCreateData,
 
 
     // NavComponent,

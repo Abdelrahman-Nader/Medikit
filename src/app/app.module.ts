@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServicesTableService } from './services/services-table.service';
 import { NgChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+// import { ToastrModule } from 'ngx-toastr';
 // import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 // import { Chart } from 'chart.js';
 // import {MomentDateAdapter} from '@angular/material-moment-adapter';
@@ -36,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgChartsModule,
     HttpClientModule,
     // FontAwesomeModule,
+    ToastrModule.forRoot(),
 
 
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { TopNavComponent } from '../shared/componets/top-nav/top-nav.component';
+import { AddToCreateDataComponent } from './addToCreateData/addToCreateData/addToCreateData.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./payment/payment.module').then((mod) => mod.PaymentModule),
       },
+      {
+        path: 'create',
+        loadChildren: () =>
+          import('../layout/addToCreateData/addToCreateData/addToCreateData.module').then((mod) => mod.AddToCreateDataModule),
+      },
     ],
   },
   {
@@ -50,6 +56,8 @@ const routes: Routes = [
       },
     ],
   },
+
+
 ];
 
 @NgModule({

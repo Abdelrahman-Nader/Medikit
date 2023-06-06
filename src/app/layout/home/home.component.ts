@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Itable } from 'src/app/itable';
+import { ServicesTableService } from 'src/app/services/services-table.service';
+import { TableElment } from 'src/app/table-elment';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +11,14 @@ import { Itable } from 'src/app/itable';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-detailsPerson: number=0;
-details: Itable= {} as Itable;
-  constructor( private activatedRoute: ActivatedRoute) { }
+data : number =0;
+details!:  Observable<TableElment[]> ;
+@Input() detaisFromOnline!:  Observable<TableElment[]>
+  constructor( private activatedRoute: ActivatedRoute, private prodDetails : ServicesTableService ) { } // activate route :بتخليني اعرف المعلومات  اللي في root
 
   ngOnInit(): void {
-this.detailsPerson = Number(this.activatedRoute.snapshot.paramMap.get('id'))
-
+this.data = Number( this.activatedRoute.snapshot.paramMap.get('id')) // id : from router link  path: 'home/:id'
+console.log(this.data)
   }
 
 }
