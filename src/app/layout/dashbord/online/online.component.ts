@@ -44,7 +44,8 @@ export class OnlineComponent implements OnInit {
   dataSource = new MatTableDataSource<TableElment>(); //Observable<TableElment[]> ;
   oneItem: any;
   globalData: any = [];
-  @Input() detailsData!: TableElment;
+  @Input() detailsData!: TableElment[];
+  upDate!: TableElment;
   constructor(
     private Services: ServicesTableService,
     http: HttpClient,
@@ -75,10 +76,13 @@ export class OnlineComponent implements OnInit {
     console.log(this.globalData);
   }
 
-  edit(item: TableElment) {
-    this.detailsData = item;
-    console.log(this.detailsData);
-    return this.detailsData;
+  public edit(item: TableElment) {
+    this.Services.showData(item)
+    // this.detailsData = item;
+    // console.log(this.detailsData);
+
+    // console.log(item)
+    // return this.detailsData;
   }
 
   // removeCart(i: any) {

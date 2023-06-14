@@ -2,41 +2,55 @@ import { log } from 'console';
 import { TableElment } from './../table-elment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, find, map, of } from 'rxjs';
+import { BehaviorSubject, Observable, find, map, observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServicesTableService {
-
+  kindOfData:any = {
+    id: null,
+    name: null,
+    username: null,
+    Age: null,
+    Gender: null,
+    AppointFor: null,
+    imgURL: null,
+  }
+  data = new BehaviorSubject<TableElment>({...this.kindOfData}) ; // her i declear var from kind of behavior subject to sent data with any compont
+  currnetData  = this.data.asObservable(); //her i declear another varable but kindof observable to subscrib data
   url = '../../assets/data.json'; //
   id = '';
-  link : any;
-  product! : Observable<TableElment[]> ;
+  link: any;
+  product!: Observable<TableElment[]>;
   constructor(private http: HttpClient) {}
 
-  public getData(): Observable<TableElment[]> {    //return type of observable spicfic table interface
-
-   let product = this.http.get<TableElment[]>(this.url); // here i mack get to return arry from type table interface
-   return product;
-  }
-  getIds(): number {
-    let ides :number = Number(this.product.pipe(map(()=>this.product)));
-    return ides
+  showData(onShow: TableElment){ // new method to update data
+    this.data.next(onShow)
   }
 
+  public getData(): Observable<TableElment[]> {
+    //return type of observable spicfic table interface
 
+    let product = this.http.get<TableElment[]>(this.url); // here i mack get to return arry from type table interface
+    return product;
+  }
+  // getIds(): number {
+  //   let ides: number = Number(this.product.pipe(map(() => this.product)));
+
+  //   return ides;
+  // }
 
 
   // getOneItem(id: TableElment ):  Observable<TableElment>  {
-//  return  this.http.get<TableElment[]>(this.url+id)
+  //  return  this.http.get<TableElment[]>(this.url+id)
   // return this.http.get<TableElment[]>.(find(pro => pro.id==id))>
-// let oneItem = this.product as Observable<TableElment[]>
-// let pro = oneItem.find( pro => pro.id == id)
-// return id
-//  return  pro? pro: null;
-   //return foundId? foundId: null;
-    // }
+  // let oneItem = this.product as Observable<TableElment[]>
+  // let pro = oneItem.find( pro => pro.id == id)
+  // return id
+  //  return  pro? pro: null;
+  //return foundId? foundId: null;
+  // }
 
   // ELEMENT_DATA: Itable[] =
   // [
