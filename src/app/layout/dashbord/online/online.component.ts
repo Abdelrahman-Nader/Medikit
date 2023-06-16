@@ -34,9 +34,9 @@ export class OnlineComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'name',
-    'username',
+    'codeNum',
     'Age',
-    'Gender',
+    'kindOf',
     'AppointFor',
     'imgURL',
   ];

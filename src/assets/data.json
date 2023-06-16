@@ -1,92 +1,92 @@
 [
   {
     "id": 1,
-    "name": "Hydrogen",
-    "username": 1.0079,
+    "name": "Hydrogen |H| الهيدروجين",
+    "codeNum": 1.0079,
     "Age": 54,
-    "Gender": "male",
+    "kindOf": "Nonmetals",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Hydrogen.jpg"
   },
   {
     "id": 2,
-    "name": "Helium",
-    "username": 4.0026,
+    "name": "Helium |HE|هيليوم ",
+    "codeNum": 4.0026,
     "Age": 76,
-    "Gender": "male",
+    "kindOf": "Nonmetals",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Helium.jpg"
   },
   {
     "id": 3,
-    "name": "Lithium",
-    "username": 6.941,
+    "name": "Lithium |LI| ليثيوم",
+    "codeNum": 6.941,
     "Age": 47,
-    "Gender": "male",
+    "kindOf": "Nonmetals",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Lithium.jpg"
   },
   {
     "id": 4,
     "name": "Beryllium",
-    "username": 9.0122,
+    "codeNum": 9.0122,
     "Age": 40,
-    "Gender": "male",
+    "kindOf": "Nonmetals",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Beryllium.jpg"
   },
   {
     "id": 5,
     "name": "Boron",
-    "username": 10.811,
+    "codeNum": 10.811,
     "Age": 43,
-    "Gender": "male",
+    "kindOf": "Nonmetals",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/dell.png"
   },
   {
     "id": 6,
     "name": "Carbon",
-    "username": 12.0107,
+    "codeNum": 12.0107,
     "Age": 12,
-    "Gender": "male",
+    "kindOf": "male",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Carbon.jpg"
   },
   {
     "id": 7,
     "name": "Nitrogen",
-    "username": 14.0067,
+    "codeNum": 14.0067,
     "Age": 12,
-    "Gender": "male",
+    "kindOf": "male",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Nitrogen.jpg"
   },
   {
     "id": 8,
     "name": "Oxygen",
-    "username": 15.9994,
+    "codeNum": 15.9994,
     "Age": 12,
-    "Gender": "male",
+    "kindOf": "male",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Oxygen.jpg"
   },
   {
     "id": 9,
     "name": "Fluorine",
-    "username": 18.9984,
+    "codeNum": 18.9984,
     "Age": 12,
-    "Gender": "male",
+    "kindOf": "male",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Fluorine.jpg"
   },
   {
     "id": 10,
     "name": "Neon",
-    "username": 20.1797,
+    "codeNum": 20.1797,
     "Age": 12,
-    "Gender": "male",
+    "kindOf": "male",
     "AppointFor": "Dr.",
-    "imgURL": "dell.png"
+    "imgURL": "../assets/imge/Neon.png"
   }
 ]

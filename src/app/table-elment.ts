@@ -1,9 +1,10 @@
 export interface TableElment {
+
   id: number;
   name: string;
-  username: number;
+  codeNum: number;
   Age: number;
-  Gender: string;
+  kindOf: string;
   AppointFor: string;
   imgURL: string;
 }
